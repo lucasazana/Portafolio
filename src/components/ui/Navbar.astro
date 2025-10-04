@@ -1,5 +1,41 @@
 ---
-// Componente Navbar - Navegación principal
+import { House, Code, Rocket, Briefcase, Mail } from "@lucide/astro";
 ---
 
-<!-- Navbar component placeholder -->
+<nav class="navbar-sidebar" aria-label="Navegación principal">
+  <ul class="nav-links">
+    <li>
+      <a href="#home" aria-label="Ir a la seccion de Inicio" title="Inicio"
+        ><House size="20" aria-hidden="true" /></a
+      >
+    </li>
+    <li>
+      <a
+        href="#skills"
+        aria-label="Ir a la seccion de Skills"
+        title="Habilidades"><Code size="20" aria-hidden="true" /></a
+      >
+    </li>
+    <li>
+      <a
+        href="#projects"
+        aria-label="Ir a la seccion de Proyectos"
+        title="Proyectos"><Rocket size="20" aria-hidden="true" /></a
+      >
+    </li>
+    <li>
+      <a
+        href="#experience"
+        aria-label="Ir a la seccion de Experiencia"
+        title="Experiencia"><Briefcase size="20" aria-hidden="true" /></a
+      >
+    </li>
+    <li>
+      <a
+        href="#contact"
+        aria-label="Ir a la seccion de Contacto"
+        title="Contacto"><Mail size="20" aria-hidden="true" /></a
+      >
+    </li>
+  </ul>
+</nav>
