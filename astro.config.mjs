@@ -7,4 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://tu-dominio.com', // Cambia esto por tu dominio
   integrations: [tailwind(), sitemap()],
+  devToolbar: {
+    enabled: false
+  }
 });

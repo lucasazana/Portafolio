@@ -1,2 +1,29 @@
-/* Estilos globales principales */
-/* global.css placeholder */
+/* reset basico */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* variables css para temas */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #0f172a;
+}
+
+.dark {
+  --color-bg: #0f172a;
+  --color-text: #f8fafc;
+}
+
+/* transiciones suaves para cambio de tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -6,82 +6,39 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // colores primarios (autoridad tecnica)
-        primary: {
-          50: "#f8fafc", // gris muy claro
-          100: "#f1f5f9", // gris claro
-          200: "#e2e8f0", // gris suave
-          300: "#cbd5e1", // gris medio claro
-          400: "#94a3b8", // gris medio
-          500: "#64748b", // gris neutro
-          600: "#475569", // gris medio oscuro
-          700: "#334155", // gris oscuro
-          800: "#1e293b", // gris muy oscuro
-          900: "#0f172a", // gris casi negro
-          DEFAULT: "#1e293b", // color por defecto
-        },
-        
-        // colores secundarios (texto de apoyo)
-        secondary: {
-          50: "#f8fafc", // gris muy claro
-          100: "#f1f5f9", // gris claro
-          200: "#e2e8f0", // gris suave
-          300: "#cbd5e1", // gris medio claro
-          400: "#94a3b8", // gris medio
-          500: "#64748b", // gris neutro
-          600: "#475569", // gris medio oscuro
-          DEFAULT: "#475569", // color por defecto
+        // colores gengar (tema principal)
+        gengar: {
+          primary: "#4C2A85",
+          secondary: "#6D28D9", 
+          accent: "#9333EA",
+          light: "#A855F7",
+          pastel: "#C084FC",
+          DEFAULT: "#4C2A85",
         },
 
-        // colores de acento (poder de llamada a la accion)
-        accent: {
-          50: "#eff6ff", // azul muy claro
-          100: "#dbeafe", // azul claro
-          200: "#bfdbfe", // azul suave
-          300: "#93c5fd", // azul medio claro
-          400: "#60a5fa", // azul medio
-          500: "#3b82f6", // azul principal
-          600: "#2563eb", // azul intenso
-          700: "#1d4ed8", // azul oscuro
-          800: "#1e40af", // azul muy oscuro
-          900: "#1e3a8a", // azul profundo
-          DEFAULT: "#3b82f6", // color por defecto
+        // tema claro
+        light: {
+          bg: "#FFFFFF",
+          card: "#FEFEFF", 
+          text: "#1F2937",
+          heading: "#111827",
+          subtext: "#6B7280",
         },
 
-        // colores de fondo
-        background: "#ffffff", // blanco
-        surface: "#f8fafc", // superficie gris claro
-
-        // colores de texto
-        text: {
-          primary: "#0f172a", // texto principal
-          secondary: "#64748b", // texto secundario
+        // tema oscuro
+        dark: {
+          bg: "#0F0A1A",
+          card: "#1A0D2E",
+          text: "#E5E7EB", 
+          heading: "#F9FAFB",
+          subtext: "#D1D5DB",
         },
+      },
 
-        // colores de estado
-        success: {
-          50: "#ecfdf5", // verde muy claro
-          100: "#d1fae5", // verde claro
-          500: "#10b981", // verde principal
-          600: "#059669", // verde intenso
-          DEFAULT: "#10b981", // color por defecto
-        },
-
-        warning: {
-          50: "#fffbeb", // amarillo muy claro
-          100: "#fef3c7", // amarillo claro
-          500: "#f59e0b", // amarillo principal
-          600: "#d97706", // amarillo intenso
-          DEFAULT: "#f59e0b", // color por defecto
-        },
-
-        error: {
-          50: "#fef2f2", // rojo muy claro
-          100: "#fee2e2", // rojo claro
-          500: "#ef4444", // rojo principal
-          600: "#dc2626", // rojo intenso
-          DEFAULT: "#ef4444", // color por defecto
-        },
+      // Sombras personalizadas Gengar
+      boxShadow: {
+        'gengar': '0 10px 25px -5px rgba(76, 42, 133, 0.15), 0 4px 6px -2px rgba(76, 42, 133, 0.05)',
+        'gengar-lg': '0 20px 40px -10px rgba(76, 42, 133, 0.2), 0 8px 16px -4px rgba(76, 42, 133, 0.1)',
       },
 
       fontFamily: {

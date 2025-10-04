@@ -1,5 +1,43 @@
 ---
-// Sección Hero - Presentación principal
+import { MessageCircleMore } from "@lucide/astro";
+import { Download } from "@lucide/astro";
+import { MoveDown } from "@lucide/astro";
 ---
 
-<!-- Hero section placeholder -->
+<section id="home" class="hero">
+  <div class="container">
+    <header class="hero-header">
+      <h1>Lucas Azaña</h1>
+      <h2>Desarrollador Full Stack & Estudiante de Ingeniería de Software</h2>
+      <p class="hero-tagline">
+        (Si, lo mas probable es que este programando a las 3 AM)
+      </p>
+      <p class="hero-subtitle">
+        Hago que las ideas se hagan realidad y se vean bien, incluso las que no
+        deberían. Uso IA para mejorar las cosas, no para echarle la culpa (esa
+        sigue siendo mía).
+      </p>
+    </header>
+    <div class="hero-actions">
+      <button type="button" aria-label="Descargar CV en PDF"
+        ><Download size="20" aria-hidden="true" />Descarga mi CV</button
+      >
+      <button type="button" aria-label="Enviame un mensaje"
+        ><MessageCircleMore size="20" aria-hidden="true" /> Dime tu idea</button
+      >
+    </div>
+    <div class="hero-stats" aria-label="Estadísticas profesionales">
+      <div class="stats-items">
+        <span class="stat-number">1+</span>
+        <span class="stat-label">Año en el área</span>
+        <span class="stat-symbol">∞</span>
+        <span class="stat-label">Café consumido</span>
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Programando</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <MoveDown size="25" />
+  </div>
+</section>
