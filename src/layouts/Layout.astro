@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/ui/Navbar.astro";
 ---
 
 <!doctype html>
@@ -23,6 +24,7 @@ import "../styles/global.css";
   <body
     class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter"
   >
+    <Navbar />
     <slot />
   </body>
 </html>

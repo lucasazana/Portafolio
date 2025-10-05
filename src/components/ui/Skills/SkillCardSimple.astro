@@ -1,0 +1,21 @@
+---
+interface Props {
+  icon: any;
+  title: string;
+  description?: string;
+}
+
+const { icon, title, description } = Astro.props;
+---
+
+<div class="skill-card">
+  <div class="skill-header">
+    <div class="skill-icon">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+        <path d={icon.path}></path>
+      </svg>
+    </div>
+    <h3 class="skill-title">{title}</h3>
+  </div>
+  <p class="skill-description">{description}</p>
+</div>

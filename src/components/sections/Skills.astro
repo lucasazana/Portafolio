@@ -1,5 +1,70 @@
 ---
-// Sección Skills - Habilidades técnicas
+import HardSkills from "../ui/Skills/HardSkills.astro";
+import SoftSkills from "../ui/Skills/SoftSkills.astro";
+import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
 ---
 
-<!-- Skills section placeholder -->
+<section id="skills" class="skills">
+  <div class="skills-container">
+    <header class="skills-header">
+      <h2>Habilidades</h2>
+      <p class="skills-tagline">
+        No busco saberlo todo, pero sí entender lo suficiente para hacerlo bien.
+        Lo que sé, lo aplico; lo que no, lo aprendo rápido.
+      </p>
+    </header>
+    <!-- botones -->
+    <div class="skills-toggle">
+      <button
+        id="hard-skills-button"
+        class="toggle-button active"
+        aria-pressed="true"
+      >
+        Hard Skills
+      </button>
+      <button
+        id="soft-skills-button"
+        class="toggle-button"
+        aria-pressed="false"
+      >
+        Soft Skills
+      </button>
+    </div>
+    <!-- tarjetas hard skills -->
+    <HardSkills />
+    <!-- tarjetas soft skills -->
+    <SoftSkills />
+    <div class="skills-extra">
+      <h3>Habilidades adicionales</h3>
+      <!-- tarjetas extra skills -->
+      <ExtraSkills />
+    </div>
+  </div>
+</section>
+
+<!-- script para los botones -->
+<script>
+  const hardButton = document.getElementById("hard-skills-button");
+  const softButton = document.getElementById("soft-skills-button");
+  const hardSkills = document.getElementById("hard-skills-cards");
+  const softSkills = document.getElementById("soft-skills-cards");
+
+  hardButton?.addEventListener("click", () => {
+    hardButton.classList.add("active");
+    hardButton.setAttribute("aria-pressed", "true");
+    softButton?.classList.remove("active");
+    softButton?.setAttribute("aria-pressed", "false");
+
+    if (hardSkills) hardSkills.style.display = "grid";
+    if (softSkills) softSkills.style.display = "none";
+  });
+
+  softButton?.addEventListener("click", () => {
+    softButton.classList.add("active");
+    softButton.setAttribute("aria-pressed", "true");
+    hardButton?.classList.remove("active");
+    hardButton?.setAttribute("aria-pressed", "false");
+    if (softSkills) softSkills.style.display = "grid";
+    if (hardSkills) hardSkills.style.display = "none";
+  });
+</script>

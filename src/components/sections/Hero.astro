@@ -19,9 +19,13 @@ import { MoveDown } from "@lucide/astro";
       </p>
     </header>
     <div class="hero-actions">
-      <button type="button" aria-label="Descargar CV en PDF"
-        ><Download size="20" aria-hidden="true" />Descarga mi CV</button
+      <a
+        href="/Mi_CV.pdf"
+        download="Lucas Azaña CV.pdf"
+        aria-label="Descargar CV en PDF"
       >
+        <Download size="20" aria-hidden="true" />Descarga mi CV
+      </a>
       <button type="button" aria-label="Enviame un mensaje"
         ><MessageCircleMore size="20" aria-hidden="true" /> Dime tu idea</button
       >

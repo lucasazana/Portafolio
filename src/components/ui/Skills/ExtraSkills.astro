@@ -1,0 +1,24 @@
+---
+import SkillCardSimple from "./SkillCardSimple.astro";
+import {
+  siSpring,
+  siMysql,
+  siIcloud,
+  siGit,
+  siGithub,
+  siClaude,
+} from "simple-icons";
+---
+
+<div id="extra-skills-cards" class="skills-grid">
+  <SkillCardSimple icon={siSpring} title="Spring" />
+
+  <SkillCardSimple icon={siMysql} title="MySQL" />
+  <SkillCardSimple icon={siIcloud} title="Servicios Web" />
+
+  <SkillCardSimple icon={siGit} title="Git" />
+
+  <SkillCardSimple icon={siGithub} title="Power BI" />
+
+  <SkillCardSimple icon={siClaude} title="Asistentes de IA" />
+</div>
