@@ -1,0 +1,75 @@
+---
+import { CheckCheck } from "@lucide/astro";
+
+interface Props {
+  startDate: string;
+  endDate: string;
+  status: string;
+  title: string;
+  company: string;
+  description: string;
+  achievements: string[];
+  technologies: string[];
+  modality: string;
+  location: string;
+}
+
+const {
+  startDate,
+  endDate,
+  status,
+  title,
+  company,
+  description,
+  achievements,
+  technologies,
+  modality,
+  location,
+} = Astro.props;
+---
+
+<div class="experience-card">
+  <!-- header con fechas y estado -->
+  <div class="experience-header">
+    <div class="experience-date">
+      <span class="start-date">{startDate}</span>
+      <span class="date-separator"> - </span>
+      <span class="end-date">{endDate}</span>
+    </div>
+    {status && <span class="experience-status">{status}</span>}
+  </div>
+  <!-- contenido de la card -->
+  <div class="experience-content">
+    <h3 class="experience-title">{title}</h3>
+    <div class="experience-company-info">
+      <h4 class="experience-company">{company}</h4>
+      <span class="experience-modality">{modality}</span>
+      {location && <span class="experience-location">{location}</span>}
+    </div>
+    <!-- descripción -->
+    <p class="experience-description">{description}</p>
+    <!-- logros -->
+    {
+      achievements && achievements.length > 0 && (
+        <ul class="experience-achievements">
+          {achievements.map((achievement) => (
+            <li class="achievement-item">
+              <CheckCheck size="16" class="achievement-check" />
+              <span>{achievement}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <!-- tecnologías -->
+    {
+      technologies && technologies.length > 0 && (
+        <div class="experience-technologies">
+          {technologies.map((tech) => (
+            <span class="tech-tag">{tech}</span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</div>

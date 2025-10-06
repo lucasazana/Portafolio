@@ -1,5 +1,49 @@
 ---
-// Sección Experience - Experiencia laboral y educativa
+import ExperienceCard from "../ui/experience/ExperienceCard.astro";
 ---
 
-<!-- Experience section placeholder -->
+<section id="experience" class="experience" aria-labelledby="experience-title">
+  <div class="experience-container">
+    <header class="experience-header">
+      <h2 id="experience-title">Mi Experiencia Profesional</h2>
+      <p class="experience-tagline">
+        Proyectos reales, retos reales, resultados medibles.
+      </p>
+    </header>
+    <div class="experience-grid" role="list">
+      <ExperienceCard
+        title="Practicante de Desarrollo Web"
+        company="IBGROUP"
+        location="Lima, Perú"
+        modality="Remoto"
+        startDate="Mayo 2025"
+        endDate="Actualidad"
+        status="Actual"
+        description="Responsable de la mejora y optimización del sitio web institucional, implementando soluciones que optimizan tiempos de carga, integran APIs RESTful y mejoran la experiencia del usuario."
+        achievements={[
+          "Rediseñé el sitio web con enfoque en usabilidad y diseño responsive.",
+          "Implementé un chatbot personalizado para atención al cliente.",
+          "Mejoré los tiempos de carga aplicando optimización de recursos estáticos.",
+          "Integré APIs RESTful para una comunicación eficiente entre frontend y backend.",
+        ]}
+        technologies={["Laravel", "PHP", "JavaScript", "MariaDB", "Git"]}
+      />
+      <ExperienceCard
+        title="Asistente de Ingeniería de Datos"
+        company="MISD SOLUTIONS"
+        location="Lima, Perú"
+        modality="Híbrido"
+        startDate="Julio 2024"
+        endDate="Diciembre 2024"
+        status="6 meses"
+        description="Colaboré en el procesamiento, migración y visualización de datos, participando además en proyectos de inteligencia artificial y análisis de información."
+        achievements={[
+          "Apoyé en la migración y organización de bases de datos.",
+          "Desarrollé dashboards interactivos para la visualización de datos.",
+          "Participé en el entrenamiento de un modelo de IA para diagnóstico ocular.",
+        ]}
+        technologies={["Python", "Power BI", "Excel", "SQL", "MongoDB"]}
+      />
+    </div>
+  </div>
+</section>
