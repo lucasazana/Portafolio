@@ -1,5 +1,44 @@
 ---
-// Sección Projects - Proyectos destacados
+import ProjectCard from "../ui/projects/ProjectCard.astro";
 ---
 
-<!-- Projects section placeholder -->
+<section id="projects" class="projects" aria-labelledby="projects-title">
+  <div class="projects-container">
+    <header class="projects-header">
+      <h2 id="projects-title">Zona de Desarrollo</h2>
+      <p class="projects-tagline">
+        Un vistazo a lo que sé hacer cuando el deadline está cerca.
+      </p>
+    </header>
+
+    <div class="projects-grid" role="list">
+      <ProjectCard
+        imageUrl="/img/projects/tienda.webp"
+        title="4ZLO – Tienda Vintage Online"
+        description="Una plataforma creada para llevar el estilo vintage al mundo digital. Permite explorar y descubrir prendas únicas, con una experiencia intuitiva y moderna. Pensada para ofrecer una gestión sencilla al administrador y una navegación fluida para el cliente."
+        technologies={["Laravel", "Blade", "Tailwind CSS", "MySQL"]}
+        codeLink="https://github.com/lucasazana/Tienda-4ZLO"
+        category="E-commerce/Web App"
+        stats={[
+          { value: "50%", label: "Velocidad de Carga" },
+          { value: "35%", label: "Aumento de Ingresos" },
+          { value: "85%", label: "Satisfacción del Cliente" },
+        ]}
+      />
+
+      <ProjectCard
+        imageUrl="/img/projects/portafolio.webp"
+        title="Portafolio Personal - Desarrollador Full Stack"
+        description="Un reflejo de mi trabajo, proceso y estilo como desarrollador. Construido con Astro y optimizado para rendimiento, accesibilidad y experiencia de usuario."
+        technologies={["Astro", "Tailwind CSS", "TypeScript"]}
+        codeLink="https://github.com/lucasazana/Portafolio"
+        category="Desarrollo Web"
+        stats={[
+          { value: "99%", label: "Rendimiento Web" },
+          { value: "99%", label: "Diseño Responsivo" },
+          { value: "∞", label: "Ideas por Implementar" },
+        ]}
+      />
+    </div>
+  </div>
+</section>

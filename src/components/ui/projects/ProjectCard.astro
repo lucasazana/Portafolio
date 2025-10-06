@@ -1,0 +1,87 @@
+---
+import { ExternalLink, Github } from "@lucide/astro";
+
+interface Props {
+  imageUrl: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  demoLink?: string;
+  codeLink?: string;
+  category: string;
+  stats?: Array<{ value: string; label: string }>;
+}
+
+const {
+  imageUrl,
+  title,
+  description,
+  technologies,
+  demoLink,
+  codeLink,
+  category,
+  stats,
+} = Astro.props;
+---
+
+<div class="projects-card">
+  <!-- imagen con overlay -->
+  <div class="projects-image">
+    <img src={imageUrl} alt={title} />
+    <div class="projects-category">{category}</div>
+  </div>
+  <!-- contenido de la card -->
+  <div class="project-card-content">
+    <!-- header de la card -->
+    <div class="project-header">
+      <h3 class="project-title">{title}</h3>
+      <div class="project-links">
+        {
+          demoLink && (
+            <a
+              href={demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Demo"
+            >
+              <ExternalLink size="16" />
+            </a>
+          )
+        }
+        {
+          codeLink && (
+            <a
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver código"
+            >
+              {" "}
+              <Github size="16" />{" "}
+            </a>
+          )
+        }
+      </div>
+    </div>
+    <!-- description de la card -->
+    <p class="project-description">{description}</p>
+    <!-- tecnologias usadas -->
+    <div class="project-technologies">
+      {technologies.map((tech) => <span class="tech-tag">{tech}</span>)}
+    </div>
+    <!-- stats de la card (solo si es neceario)-->
+    {
+      stats && stats.length > 0 && (
+        <div class="project-stats">
+          {" "}
+          {stats.map((stat) => (
+            <div class="stat">
+              <span class="stat-value">{stat.value}</span>
+              <span class="stat-label">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</div>

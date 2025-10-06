@@ -4,41 +4,51 @@ import SoftSkills from "../ui/Skills/SoftSkills.astro";
 import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
 ---
 
-<section id="skills" class="skills">
+<section id="skills" class="skills" aria-labelledby="skills-title">
   <div class="skills-container">
     <header class="skills-header">
-      <h2>Habilidades</h2>
+      <h2 id="skills-title">Habilidades</h2>
       <p class="skills-tagline">
         No busco saberlo todo, pero sí entender lo suficiente para hacerlo bien.
         Lo que sé, lo aplico; lo que no, lo aprendo rápido.
       </p>
     </header>
     <!-- botones -->
-    <div class="skills-toggle">
+    <nav
+      class="skills-toggle"
+      role="tablist"
+      aria-label="Filtros de habilidades"
+    >
       <button
         id="hard-skills-button"
         class="toggle-button active"
+        role="tab"
         aria-pressed="true"
+        aria-controls="hard-skills-cards"
+        aria-selected="true"
       >
         Hard Skills
       </button>
       <button
         id="soft-skills-button"
         class="toggle-button"
+        role="tab"
         aria-pressed="false"
+        aria-controls="soft-skills-cards"
+        aria-selected="false"
       >
         Soft Skills
       </button>
-    </div>
+    </nav>
     <!-- tarjetas hard skills -->
     <HardSkills />
     <!-- tarjetas soft skills -->
     <SoftSkills />
-    <div class="skills-extra">
-      <h3>Habilidades adicionales</h3>
+    <aside class="skills-extra" aria-labelledby="extra-skills-title">
+      <h3 id="extra-skills-title">Habilidades adicionales</h3>
       <!-- tarjetas extra skills -->
       <ExtraSkills />
-    </div>
+    </aside>
   </div>
 </section>
 
@@ -52,19 +62,36 @@ import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
   hardButton?.addEventListener("click", () => {
     hardButton.classList.add("active");
     hardButton.setAttribute("aria-pressed", "true");
+    hardButton.setAttribute("aria-selected", "true");
     softButton?.classList.remove("active");
     softButton?.setAttribute("aria-pressed", "false");
+    softButton?.setAttribute("aria-selected", "false");
 
-    if (hardSkills) hardSkills.style.display = "grid";
-    if (softSkills) softSkills.style.display = "none";
+    if (hardSkills) {
+      hardSkills.style.display = "grid";
+      hardSkills.setAttribute("aria-hidden", "false");
+    }
+    if (softSkills) {
+      softSkills.style.display = "none";
+      softSkills.setAttribute("aria-hidden", "true");
+    }
   });
 
   softButton?.addEventListener("click", () => {
     softButton.classList.add("active");
     softButton.setAttribute("aria-pressed", "true");
+    softButton.setAttribute("aria-selected", "true");
     hardButton?.classList.remove("active");
     hardButton?.setAttribute("aria-pressed", "false");
-    if (softSkills) softSkills.style.display = "grid";
-    if (hardSkills) hardSkills.style.display = "none";
+    hardButton?.setAttribute("aria-selected", "false");
+
+    if (softSkills) {
+      softSkills.style.display = "grid";
+      softSkills.setAttribute("aria-hidden", "false");
+    }
+    if (hardSkills) {
+      hardSkills.style.display = "none";
+      hardSkills.setAttribute("aria-hidden", "true");
+    }
   });
 </script>
