@@ -1,0 +1,47 @@
+<div
+  id="contact-modal"
+  class="contact-modal"
+  style="display: none;"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+  tabindex="-1"
+>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modal-title">Contacto Rápido</h3>
+      <button type="button" id="close-modal" aria-label="Cerrar">X</button>
+    </div>
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label
+          >Nombre <input
+            type="text"
+            name="name"
+            placeholder="Ej: Perez Perez"
+            required
+          /></label
+        >
+      </p>
+      <p>
+        <label
+          >Correo <input
+            type="email"
+            name="email"
+            placeholder="ingresatu@correo.com"
+            required
+          /></label
+        >
+      </p>
+      <p>
+        <label
+          >Cuentame más <textarea name="message" placeholder="Describe tu idea"
+          ></textarea>
+        </label>
+      </p>
+      <p>
+        <button type="submit" aria-label="Send">Enviar</button>
+      </p>
+    </form>
+  </div>
+</div>

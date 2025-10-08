@@ -2,6 +2,7 @@
 import { MessageCircleMore } from "@lucide/astro";
 import { Download } from "@lucide/astro";
 import { MoveDown } from "@lucide/astro";
+import ContactModal from "../ui/contact/ContactModal.astro";
 ---
 
 <section id="home" class="hero">
@@ -26,7 +27,10 @@ import { MoveDown } from "@lucide/astro";
       >
         <Download size="20" aria-hidden="true" />Descarga mi CV
       </a>
-      <button type="button" aria-label="Enviame un mensaje"
+      <button
+        type="button"
+        aria-label="Enviame un mensaje"
+        id="open-contact-modal"
         ><MessageCircleMore size="20" aria-hidden="true" /> Dime tu idea</button
       >
     </div>
@@ -35,7 +39,7 @@ import { MoveDown } from "@lucide/astro";
         <span class="stat-number">1+</span>
         <span class="stat-label">Año en el área</span>
         <span class="stat-symbol">∞</span>
-        <span class="stat-label">Café consumido</span>
+        <span class="stat-label">Ideas</span>
         <span class="stat-number">24/7</span>
         <span class="stat-label">Programando</span>
       </div>
@@ -45,3 +49,5 @@ import { MoveDown } from "@lucide/astro";
     <MoveDown size="25" />
   </div>
 </section>
+<ContactModal />
+<script src="/src/scripts/modalContact.js"></script>
