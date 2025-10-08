@@ -1,5 +1,68 @@
 ---
-// Sección ContactMe - Formulario de contacto
+import ContactInfoCard from "../ui/contact/ContactInfoCard.astro";
+import SocialLinksCard from "../ui/contact/SocialLinksCard.astro";
+import SocialLinks from "../ui/SocialLinks.astro";
 ---
 
-<!-- ContactMe section placeholder -->
+<section id="contact" class="contact" aria-labelledby="contact-title">
+  <div class="contact-container">
+    <header class="contact-header">
+      <h2 id="contact-title">Hagamos que tus ideas funcionen</h2>
+      <p class="contact-tagline">
+        Cada gran resultado empieza con una buena conversación.
+      </p>
+    </header>
+    <div class="contact-grid">
+      <div class="contact-form">
+        <div class="contact-form-title">
+          <h3 id="contact-form-title">Cuentame tu idea</h3>
+        </div>
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label
+              >Nombre * <input
+                type="text"
+                name="name"
+                placeholder="Ej: Perez Perez"
+                required
+              /></label
+            >
+          </p>
+          <p>
+            <label
+              >Correo * <input
+                type="email"
+                name="email"
+                placeholder="ingresatu@correo.com"
+                required
+              /></label
+            >
+          </p>
+          <p>
+            <label
+              >Tipo de Proyecto <select name="project-type" required>
+                <option value="">Seleccion un tipo</option>
+                <option value="web">Desarrollo Web</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="automation">Automatización</option>
+                <option value="other">Otros</option>
+              </select>
+            </label>
+          </p>
+          <p>
+            <label
+              >Cuentame más <textarea
+                name="message"
+                placeholder="Describe tu idea"></textarea>
+            </label>
+          </p>
+          <p>
+            <button type="submit" aria-label="Send">Enviar</button>
+          </p>
+        </form>
+      </div>
+      <ContactInfoCard />
+      <SocialLinksCard />
+    </div>
+  </div>
+</section>
