@@ -1,3 +1,16 @@
-<button type="button" class="theme-button" aria-label="Cambiar tema" disabled>
-  Tema</button
->
+<div style="position:relative;display:inline-block;">
+  <button
+    type="button"
+    id="theme-toggle-btn"
+    class="theme-button"
+    aria-label="Cambiar tema"
+  >
+    <span id="selected-theme">Tema</span>
+  </button>
+  <div id="theme-menu" style="display:none; position:absolute;">
+    <button type="button" data-theme="light">Claro</button>
+    <br />
+    <button type="button" data-theme="dark">Oscuro</button>
+  </div>
+</div>
+<script src="/src/scripts/toggleTheme.js"></script>
