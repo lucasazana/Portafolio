@@ -3,17 +3,21 @@ import { Linkedin, Github } from "@lucide/astro";
 ---
 
 <div class="social-links-card">
-  <h3>Contactame por medio de redes sociales</h3>
+  <h3 data-i18n="contact.social_title">
+    Contactame por medio de redes sociales
+  </h3>
   <div class="social-links">
     <a href="https://github.com/lucasazana" target="_blank" rel="noopener">
-      <Linkedin size="24" aria-label="LinkedIn" /> LinkedIn
+      <Linkedin size="24" aria-label="LinkedIn" />
+      <span data-i18n="contact.linkedin">LinkedIn</span>
     </a>
     <a
       href="https://www.linkedin.com/in/lucas-aza%C3%B1a-232bb3338/"
       target="_blank"
       rel="noopener"
     >
-      <Github size="24" aria-label="GitHub" /> GitHub
+      <Github size="24" aria-label="GitHub" />
+      <span data-i18n="contact.github">GitHub</span>
     </a>
   </div>
 </div>

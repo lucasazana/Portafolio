@@ -5,8 +5,10 @@ import ProjectCard from "../ui/projects/ProjectCard.astro";
 <section id="projects" class="projects" aria-labelledby="projects-title">
   <div class="projects-container">
     <header class="projects-header">
-      <h2 id="projects-title">Zona de Desarrollo</h2>
-      <p class="projects-tagline">
+      <h2 id="projects-title" data-i18n="projects.projects_title">
+        Zona de Desarrollo
+      </h2>
+      <p class="projects-tagline" data-i18n="projects.projects_tagline">
         Un vistazo a lo que sé hacer cuando el deadline está cerca.
       </p>
     </header>
@@ -19,10 +21,25 @@ import ProjectCard from "../ui/projects/ProjectCard.astro";
         technologies={["Laravel", "Blade", "Tailwind CSS", "MySQL"]}
         codeLink="https://github.com/lucasazana/Tienda-4ZLO"
         category="E-commerce/Web App"
+        dataI18nTitle="projects.project_4zlo_title"
+        dataI18nDesc="projects.project_4zlo_desc"
+        dataI18nCategory="projects.project_4zlo_category"
         stats={[
-          { value: "50%", label: "Velocidad de Carga" },
-          { value: "35%", label: "Aumento de Ingresos" },
-          { value: "85%", label: "Satisfacción del Cliente" },
+          {
+            value: "50%",
+            label: "Velocidad de Carga",
+            dataI18nLabel: "projects.project_4zlo_stats_1_label",
+          },
+          {
+            value: "35%",
+            label: "Aumento de Ingresos",
+            dataI18nLabel: "projects.project_4zlo_stats_2_label",
+          },
+          {
+            value: "85%",
+            label: "Satisfacción del Cliente",
+            dataI18nLabel: "projects.project_4zlo_stats_3_label",
+          },
         ]}
       />
 
@@ -33,10 +50,25 @@ import ProjectCard from "../ui/projects/ProjectCard.astro";
         technologies={["Astro", "Tailwind CSS", "TypeScript"]}
         codeLink="https://github.com/lucasazana/Portafolio"
         category="Desarrollo Web"
+        dataI18nTitle="projects.project_portfolio_title"
+        dataI18nDesc="projects.project_portfolio_desc"
+        dataI18nCategory="projects.project_portfolio_category"
         stats={[
-          { value: "99%", label: "Rendimiento Web" },
-          { value: "99%", label: "Diseño Responsivo" },
-          { value: "∞", label: "Ideas por Implementar" },
+          {
+            value: "99%",
+            label: "Rendimiento Web",
+            dataI18nLabel: "projects.project_portfolio_stats_1_label",
+          },
+          {
+            value: "99%",
+            label: "Diseño Responsivo",
+            dataI18nLabel: "projects.project_portfolio_stats_2_label",
+          },
+          {
+            value: "∞",
+            label: "Ideas por Implementar",
+            dataI18nLabel: "projects.project_portfolio_stats_3_label",
+          },
         ]}
       />
     </div>

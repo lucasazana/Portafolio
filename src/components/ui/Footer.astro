@@ -9,41 +9,40 @@ import { Braces } from "@lucide/astro";
         <span class="footer-icon">
           <Braces size="24" aria-hidden="true" />
         </span>
-        <span class="footer-title">Portafolio Web | Lucas Azaña</span>
+        <span class="footer-title" data-i18n="footer.title"
+          >Portafolio Web | Lucas Azaña</span
+        >
       </div>
-      <p class="footer-description">
+      <p class="footer-description" data-i18n="footer.description">
         Me gusta crear cosas que no solo funcionen, sino que también se vean
         bien.
       </p>
     </div>
     <div>
-      <h4>Servicios</h4>
+      <h4 data-i18n="footer.services_title">Servicios</h4>
       <ul>
-        <li>Desarrollo Web</li>
-        <li>E-commerce Personalizado</li>
-        <li>Automatización y Dashboards</li>
-        <li>Mantenimiento y Optimización</li>
+        <li data-i18n="footer.services_web">Desarrollo Web</li>
+        <li data-i18n="footer.services_ecommerce">E-commerce Personalizado</li>
+        <li data-i18n="footer.services_automation">
+          Automatización y Dashboards
+        </li>
+        <li data-i18n="footer.services_maintenance">
+          Mantenimiento y Optimización
+        </li>
       </ul>
     </div>
     <div>
-      <h4>Tecnologías</h4>
+      <h4 data-i18n="footer.tech_title">Tecnologías</h4>
       <ul>
-        <li>Laravel</li>
-        <li>Astro</li>
-        <li>Tailwind CSS</li>
-        <li>MySQL</li>
+        <li data-i18n="footer.tech_laravel">Laravel</li>
+        <li data-i18n="footer.tech_astro">Astro</li>
+        <li data-i18n="footer.tech_tailwind">Tailwind CSS</li>
+        <li data-i18n="footer.tech_mysql">MySQL</li>
       </ul>
     </div>
     <hr />
     <div class="footer-button">
-      <span
-        >&copy; 2025 | Portafolio Web by Lucas Azaña. Todos los derechos
-        reservados</span
-      >
-      <div class="footer-actions">
-        <button disabled title="Pendiente">Tema</button>
-        <button disabled title="Pendiente">Idioma</button>
-      </div>
+      <span data-i18n="footer.copyright">&copy; 2025 | Lucas Azaña</span>
     </div>
   </div>
 </footer>

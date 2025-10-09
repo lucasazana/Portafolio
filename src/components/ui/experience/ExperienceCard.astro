@@ -12,6 +12,15 @@ interface Props {
   technologies: string[];
   modality: string;
   location: string;
+  dataI18nTitle?: string;
+  dataI18nCompany?: string;
+  dataI18nLocation?: string;
+  dataI18nModality?: string;
+  dataI18nStart?: string;
+  dataI18nEnd?: string;
+  dataI18nStatus?: string;
+  dataI18nDesc?: string;
+  dataI18nAchievements?: string[];
 }
 
 const {
@@ -25,6 +34,15 @@ const {
   technologies,
   modality,
   location,
+  dataI18nTitle,
+  dataI18nCompany,
+  dataI18nLocation,
+  dataI18nModality,
+  dataI18nStart,
+  dataI18nEnd,
+  dataI18nStatus,
+  dataI18nDesc,
+  dataI18nAchievements,
 } = Astro.props;
 ---
 
@@ -32,30 +50,58 @@ const {
   <!-- header con fechas y estado -->
   <div class="experience-header">
     <div class="experience-date">
-      <span class="start-date">{startDate}</span>
+      <span class="start-date" data-i18n-start={dataI18nStart}>{startDate}</span
+      >
       <span class="date-separator"> - </span>
-      <span class="end-date">{endDate}</span>
+      <span class="end-date" data-i18n-end={dataI18nEnd}>{endDate}</span>
     </div>
-    {status && <span class="experience-status">{status}</span>}
+    {
+      status && (
+        <span class="experience-status" data-i18n-status={dataI18nStatus}>
+          {status}
+        </span>
+      )
+    }
   </div>
   <!-- contenido de la card -->
   <div class="experience-content">
-    <h3 class="experience-title">{title}</h3>
+    <h3 class="experience-title" data-i18n-title={dataI18nTitle}>{title}</h3>
     <div class="experience-company-info">
-      <h4 class="experience-company">{company}</h4>
-      <span class="experience-modality">{modality}</span>
-      {location && <span class="experience-location">{location}</span>}
+      <h4 class="experience-company" data-i18n-company={dataI18nCompany}>
+        {company}
+      </h4>
+      <span class="experience-modality" data-i18n-modality={dataI18nModality}
+        >{modality}</span
+      >
+      {
+        location && (
+          <span
+            class="experience-location"
+            data-i18n-location={dataI18nLocation}
+          >
+            {location}
+          </span>
+        )
+      }
     </div>
     <!-- descripción -->
-    <p class="experience-description">{description}</p>
+    <p class="experience-description" data-i18n-desc={dataI18nDesc}>
+      {description}
+    </p>
     <!-- logros -->
     {
       achievements && achievements.length > 0 && (
         <ul class="experience-achievements">
-          {achievements.map((achievement) => (
+          {achievements.map((achievement, i) => (
             <li class="achievement-item">
               <CheckCheck size="16" class="achievement-check" />
-              <span>{achievement}</span>
+              <span
+                data-i18n-achievement={
+                  dataI18nAchievements ? dataI18nAchievements[i] : undefined
+                }
+              >
+                {achievement}
+              </span>
             </li>
           ))}
         </ul>

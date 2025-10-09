@@ -1,63 +1,93 @@
 ---
 import ContactInfoCard from "../ui/contact/ContactInfoCard.astro";
 import SocialLinksCard from "../ui/contact/SocialLinksCard.astro";
-import SocialLinks from "../ui/SocialLinks.astro";
+import SocialLinks from "../ui/contact/SocialLinksCard.astro";
 ---
 
 <section id="contact" class="contact" aria-labelledby="contact-title">
   <div class="contact-container">
     <header class="contact-header">
-      <h2 id="contact-title">Hagamos que tus ideas funcionen</h2>
-      <p class="contact-tagline">
+      <h2 id="contact-title" data-i18n="contact.contact_title">
+        Hagamos que tus ideas funcionen
+      </h2>
+      <p class="contact-tagline" data-i18n="contact.contact_tagline">
         Cada gran resultado empieza con una buena conversación.
       </p>
     </header>
     <div class="contact-grid">
       <div class="contact-form">
         <div class="contact-form-title">
-          <h3 id="contact-form-title">Cuentame tu idea</h3>
+          <h3 id="contact-form-title" data-i18n="contact.form_title">
+            Cuentame tu idea
+          </h3>
         </div>
         <form name="contact" method="POST" data-netlify="true">
           <p>
-            <label
-              >Nombre * <input
+            <label>
+              <span data-i18n="contact.label_name">Nombre *</span>
+              <input
                 type="text"
                 name="name"
                 placeholder="Ej: Perez Perez"
+                data-i18n-label="contact.placeholder_name"
                 required
-              /></label
-            >
+              />
+            </label>
           </p>
           <p>
-            <label
-              >Correo * <input
+            <label>
+              <span data-i18n="contact.label_email">Correo *</span>
+              <input
                 type="email"
                 name="email"
-                placeholder="ingresatu@correo.com"
+                placeholder="tu@correo.com"
+                data-i18n-label="contact.placeholder_email"
                 required
-              /></label
-            >
+              />
+            </label>
           </p>
           <p>
-            <label
-              >Tipo de Proyecto <select name="project-type" required>
-                <option value="">Seleccion un tipo</option>
-                <option value="web">Desarrollo Web</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="automation">Automatización</option>
-                <option value="other">Otros</option>
+            <label>
+              <span data-i18n="contact.label_project_type"
+                >Tipo de Proyecto</span
+              >
+              <select name="project-type" required>
+                <option value="" data-i18n-label="contact.option_select_type"
+                  >Seleccion un tipo</option
+                >
+                <option value="web" data-i18n-label="contact.option_web"
+                  >Desarrollo Web</option
+                >
+                <option
+                  value="ecommerce"
+                  data-i18n-label="contact.option_ecommerce">E-commerce</option
+                >
+                <option
+                  value="automation"
+                  data-i18n-label="contact.option_automation"
+                  >Automatización</option
+                >
+                <option value="other" data-i18n-label="contact.option_other"
+                  >Otros</option
+                >
               </select>
             </label>
           </p>
           <p>
-            <label
-              >Cuentame más <textarea
+            <label>
+              <span data-i18n="contact.label_message">Cuentame más</span>
+              <textarea
                 name="message"
-                placeholder="Describe tu idea"></textarea>
+                placeholder="Describe tu idea"
+                data-i18n-label="contact.placeholder_message"></textarea>
             </label>
           </p>
           <p>
-            <button type="submit" aria-label="Send">Enviar</button>
+            <button
+              type="submit"
+              aria-label="Send"
+              data-i18n-label="contact.label_send">Enviar</button
+            >
           </p>
         </form>
       </div>

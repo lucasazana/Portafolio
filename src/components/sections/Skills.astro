@@ -7,8 +7,8 @@ import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
 <section id="skills" class="skills" aria-labelledby="skills-title">
   <div class="skills-container">
     <header class="skills-header">
-      <h2 id="skills-title">Habilidades</h2>
-      <p class="skills-tagline">
+      <h2 id="skills-title" data-i18n="skills.skills_title">Habilidades</h2>
+      <p class="skills-tagline" data-i18n="skills.skills_tagline">
         No busco saberlo todo, pero sí entender lo suficiente para hacerlo bien.
         Lo que sé, lo aplico; lo que no, lo aprendo rápido.
       </p>
@@ -26,6 +26,7 @@ import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
         aria-pressed="true"
         aria-controls="hard-skills-cards"
         aria-selected="true"
+        data-i18n="skills.skills_hard"
       >
         Hard Skills
       </button>
@@ -36,6 +37,7 @@ import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
         aria-pressed="false"
         aria-controls="soft-skills-cards"
         aria-selected="false"
+        data-i18n="skills.skills_soft"
       >
         Soft Skills
       </button>
@@ -45,7 +47,9 @@ import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
     <!-- tarjetas soft skills -->
     <SoftSkills />
     <aside class="skills-extra" aria-labelledby="extra-skills-title">
-      <h3 id="extra-skills-title">Habilidades adicionales</h3>
+      <h3 id="extra-skills-title" data-i18n="skills.skills_extra_title">
+        Habilidades adicionales
+      </h3>
       <!-- tarjetas extra skills -->
       <ExtraSkills />
     </aside>

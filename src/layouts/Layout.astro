@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Navbar from "../components/ui/Navbar.astro";
 import Footer from "../components/ui/Footer.astro";
+import LanguageToggle from "../components/ui/LanguageToggle.astro";
+import ThemeToggle from "../components/ui/ThemeToggle.astro";
 ---
 
 <!doctype html>
@@ -26,7 +28,12 @@ import Footer from "../components/ui/Footer.astro";
     class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter"
   >
     <Navbar />
+    <div class="">
+      <ThemeToggle />
+      <LanguageToggle />
+    </div>
     <slot />
     <Footer />
   </body>
 </html>
+<script src="/src/scripts/i18n.js"></script>

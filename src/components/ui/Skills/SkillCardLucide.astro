@@ -3,9 +3,17 @@ interface Props {
   icon: any;
   title: string;
   description: string;
+  dataI18nTitle?: string;
+  dataI18nDesc?: string;
 }
 
-const { icon: Icon, title, description } = Astro.props;
+const {
+  icon: Icon,
+  title,
+  description,
+  dataI18nTitle,
+  dataI18nDesc,
+} = Astro.props;
 ---
 
 <div class="skill-card">
@@ -13,7 +21,7 @@ const { icon: Icon, title, description } = Astro.props;
     <div class="skill-icon">
       <Icon size="32" />
     </div>
-    <h3 class="skill-title">{title}</h3>
+    <h3 class="skill-title" data-i18n-title={dataI18nTitle}>{title}</h3>
   </div>
-  <p class="skill-description">{description}</p>
+  <p class="skill-description" data-i18n-desc={dataI18nDesc}>{description}</p>
 </div>

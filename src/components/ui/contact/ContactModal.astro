@@ -9,38 +9,54 @@
 >
   <div class="modal-content">
     <div class="modal-header">
-      <h3 id="modal-title">Contacto Rápido</h3>
-      <button type="button" id="close-modal" aria-label="Cerrar">X</button>
+      <h3 id="modal-title" data-i18n="contact.modal_title">Contacto Rápido</h3>
+      <button
+        type="button"
+        id="close-modal"
+        aria-label="Cerrar"
+        data-i18n="contact.modal_close">X</button
+      >
     </div>
     <form name="contact" method="POST" data-netlify="true">
       <p>
-        <label
-          >Nombre <input
+        <label>
+          <span data-i18n="contact.label_name">Nombre</span>
+          <input
             type="text"
             name="name"
             placeholder="Ej: Perez Perez"
+            data-i18n-label="contact.placeholder_name"
             required
-          /></label
-        >
-      </p>
-      <p>
-        <label
-          >Correo <input
-            type="email"
-            name="email"
-            placeholder="ingresatu@correo.com"
-            required
-          /></label
-        >
-      </p>
-      <p>
-        <label
-          >Cuentame más <textarea name="message" placeholder="Describe tu idea"
-          ></textarea>
+          />
         </label>
       </p>
       <p>
-        <button type="submit" aria-label="Send">Enviar</button>
+        <label>
+          <span data-i18n="contact.label_email">Correo</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="ingresatu@correo.com"
+            data-i18n-label="contact.placeholder_email"
+            required
+          />
+        </label>
+      </p>
+      <p>
+        <label>
+          <span data-i18n="contact.label_message">Cuentame más</span>
+          <textarea
+            name="message"
+            placeholder="Describe tu idea"
+            data-i18n-label="contact.placeholder_message"></textarea>
+        </label>
+      </p>
+      <p>
+        <button
+          type="submit"
+          aria-label="Send"
+          data-i18n-label="contact.label_send">Enviar</button
+        >
       </p>
     </form>
   </div>

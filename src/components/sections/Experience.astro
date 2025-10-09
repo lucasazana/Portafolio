@@ -5,8 +5,10 @@ import ExperienceCard from "../ui/experience/ExperienceCard.astro";
 <section id="experience" class="experience" aria-labelledby="experience-title">
   <div class="experience-container">
     <header class="experience-header">
-      <h2 id="experience-title">Mi Experiencia Profesional</h2>
-      <p class="experience-tagline">
+      <h2 id="experience-title" data-i18n="experience.experience_title">
+        Mi Experiencia Profesional
+      </h2>
+      <p class="experience-tagline" data-i18n="experience.experience_tagline">
         Proyectos reales, retos reales, resultados medibles.
       </p>
     </header>
@@ -27,6 +29,20 @@ import ExperienceCard from "../ui/experience/ExperienceCard.astro";
           "Integré APIs RESTful para una comunicación eficiente entre frontend y backend.",
         ]}
         technologies={["Laravel", "PHP", "JavaScript", "MariaDB", "Git"]}
+        dataI18nTitle="experience.exp_1_title"
+        dataI18nCompany="experience.exp_1_company"
+        dataI18nLocation="experience.exp_1_location"
+        dataI18nModality="experience.exp_1_modality"
+        dataI18nStart="experience.exp_1_start"
+        dataI18nEnd="experience.exp_1_end"
+        dataI18nStatus="experience.exp_1_status"
+        dataI18nDesc="experience.exp_1_desc"
+        dataI18nAchievements={[
+          "experience.exp_1_achievements.0",
+          "experience.exp_1_achievements.1",
+          "experience.exp_1_achievements.2",
+          "experience.exp_1_achievements.3",
+        ]}
       />
       <ExperienceCard
         title="Asistente de Ingeniería de Datos"
@@ -43,6 +59,19 @@ import ExperienceCard from "../ui/experience/ExperienceCard.astro";
           "Participé en el entrenamiento de un modelo de IA para diagnóstico ocular.",
         ]}
         technologies={["Python", "Power BI", "Excel", "SQL", "MongoDB"]}
+        dataI18nTitle="experience.exp_2_title"
+        dataI18nCompany="experience.exp_2_company"
+        dataI18nLocation="experience.exp_2_location"
+        dataI18nModality="experience.exp_2_modality"
+        dataI18nStart="experience.exp_2_start"
+        dataI18nEnd="experience.exp_2_end"
+        dataI18nStatus="experience.exp_2_status"
+        dataI18nDesc="experience.exp_2_desc"
+        dataI18nAchievements={[
+          "experience.exp_2_achievements.0",
+          "experience.exp_2_achievements.1",
+          "experience.exp_2_achievements.2",
+        ]}
       />
     </div>
   </div>

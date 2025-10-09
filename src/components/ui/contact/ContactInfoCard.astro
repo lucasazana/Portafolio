@@ -3,15 +3,16 @@ import { Mail, MapPin, Clock } from "@lucide/astro";
 ---
 
 <div class="contact-info-card">
-  <h3>Trabajemos en algo juntos</h3>
+  <h3 data-i18n="contact.info_title">Trabajemos en algo juntos</h3>
   <ul class="contact-info-list">
     <li class="contact-info-item">
       <span class="contact-info-icon">
         <Mail size="24" aria-hidden="true" />
       </span>
       <div>
-        <strong> Mi correo</strong><br />
-        <span>idontcarelucas@gmail.com</span>
+        <strong data-i18n="contact.info_mail_label">Correo</strong><br />
+        <span data-i18n="contact.info_mail_value">idontcarelucas@gmail.com</span
+        >
       </div>
     </li>
     <li class="contact-info-item">
@@ -19,18 +20,23 @@ import { Mail, MapPin, Clock } from "@lucide/astro";
         <MapPin size="24" aria-hidden="true" />
       </span>
       <div>
-        <strong>Disponibilidad</strong><br />
-        <span>Practicamente en todo el mundo</span>
+        <strong data-i18n="contact.info_availability_label"
+          >Disponibilidad</strong
+        ><br />
+        <span data-i18n="contact.info_availability_value"
+          >Practicamente en todo el mundo</span
+        >
       </div>
-      <li class="contact-info-item">
-        <span class="contact-info-icon">
-          <Clock size="24" aria-hidden="true" />
-        </span>
-        <div>
-          <strong>Tiempo de espera</strong><br />
-          <span>En menos de 12 horas</span>
-        </div>
-      </li>
+    </li>
+    <li class="contact-info-item">
+      <span class="contact-info-icon">
+        <Clock size="24" aria-hidden="true" />
+      </span>
+      <div>
+        <strong data-i18n="contact.info_time_label">Tiempo de espera</strong><br
+        />
+        <span data-i18n="contact.info_time_value">En menos de 12 horas</span>
+      </div>
     </li>
   </ul>
 </div>

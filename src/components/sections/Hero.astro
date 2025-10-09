@@ -8,12 +8,14 @@ import ContactModal from "../ui/contact/ContactModal.astro";
 <section id="home" class="hero">
   <div class="container">
     <header class="hero-header">
-      <h1>Lucas Azaña</h1>
-      <h2>Desarrollador Full Stack & Estudiante de Ingeniería de Software</h2>
-      <p class="hero-tagline">
+      <h1 data-i18n="home.hero_name">Lucas Azaña</h1>
+      <h2 data-i18n="home.hero_title">
+        Desarrollador Full Stack & Estudiante de Ingeniería de Software
+      </h2>
+      <p class="hero-tagline" data-i18n="home.hero_tagline">
         (Si, lo mas probable es que este programando a las 3 AM)
       </p>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-i18n="home.hero_subtitle">
         Hago que las ideas se hagan realidad y se vean bien, incluso las que no
         deberían. Uso IA para mejorar las cosas, no para echarle la culpa (esa
         sigue siendo mía).
@@ -25,23 +27,30 @@ import ContactModal from "../ui/contact/ContactModal.astro";
         download="Lucas Azaña CV.pdf"
         aria-label="Descargar CV en PDF"
       >
-        <Download size="20" aria-hidden="true" />Descarga mi CV
+        <Download size="20" aria-hidden="true" /><span data-i18n="home.hero_cv"
+          >Descarga mi CV</span
+        >
       </a>
       <button
         type="button"
         aria-label="Enviame un mensaje"
         id="open-contact-modal"
-        ><MessageCircleMore size="20" aria-hidden="true" /> Dime tu idea</button
       >
+        <MessageCircleMore size="20" aria-hidden="true" />
+        <span data-i18n="home.hero_idea">Dime tu idea</span>
+      </button>
     </div>
     <div class="hero-stats" aria-label="Estadísticas profesionales">
       <div class="stats-items">
         <span class="stat-number">1+</span>
-        <span class="stat-label">Año en el área</span>
+        <span class="stat-label" data-i18n="home.hero_year">Año en el área</span
+        >
         <span class="stat-symbol">∞</span>
-        <span class="stat-label">Ideas</span>
+        <span class="stat-label" data-i18n="home.hero_ideas">Ideas</span>
         <span class="stat-number">24/7</span>
-        <span class="stat-label">Programando</span>
+        <span class="stat-label" data-i18n="home.hero_programming"
+          >Programando</span
+        >
       </div>
     </div>
   </div>

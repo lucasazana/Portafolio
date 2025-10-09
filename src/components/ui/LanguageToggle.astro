@@ -1,5 +1,14 @@
----
-// Componente LanguageToggle - Botón para cambiar idioma
----
-
-<!-- LanguageToggle component placeholder -->
+<button
+  type="button"
+  class="language-button"
+  aria-label="Cambiar idioma"
+  id="language-toggle"
+>
+  <span id="selected-lang">ES</span>
+</button>
+<div id="language-menu" style="display:none; position:absolute">
+  <button type="button" data-lang="EN">English</button>
+  <br />
+  <button type="button" data-lang="ES">Español</button>
+</div>
+<script src="/src/scripts/toggleLanguage.js"></script>
