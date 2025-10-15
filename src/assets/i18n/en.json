@@ -1,9 +1,9 @@
 {
         "home": {
                 "hero_name": "Lucas Azana",
-                "hero_title": "Full Stack Developer & Software Engineering Student",
-                "hero_tagline": "(Yes, most likely I'm coding at 3 AM)",
-                "hero_subtitle": "I turn ideas into reality and make them look good, even those that shouldn't. I use AI to improve things, not to blame it (that's still on me).",
+                "hero_title_1": "Full Stack Developer &",
+                "hero_title_2": "Software Engineering Student",
+                "hero_subtitle": "I turn ideas into reality and make them look good, even those that shouldn't. I use AI to improve things, not to blame it.",
                 "hero_cv": "Download my CV",
                 "hero_idea": "Tell me your idea",
                 "hero_year": "Year in the field",
@@ -112,7 +112,6 @@
                 "option_automation": "Automation",
                 "option_other": "Other",
                 "modal_title": "Quick Contact",
-                "modal_close": "Close",
                 "social_title": "Contact me via social networks",
                 "linkedin": "LinkedIn",
                 "github": "GitHub",

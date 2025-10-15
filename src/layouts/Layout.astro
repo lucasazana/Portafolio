@@ -12,7 +12,7 @@ import ThemeToggle from "../components/ui/ThemeToggle.astro";
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Portfolio Personal de Lucas Azaña - Desarrollador Full Stack especializado en React, Node.js y tecnologías web modernas"
+      content="Portfolio Personal de Lucas Azaña - Desarrollador Full Stack"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -22,18 +22,24 @@ import ThemeToggle from "../components/ui/ThemeToggle.astro";
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Lucas Azaña | Portfolio</title>
+    <title>Lucas Azaña | Portafolio</title>
   </head>
   <body
     class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter"
   >
     <Navbar />
-    <div class="">
-      <ThemeToggle />
-      <LanguageToggle />
+    <!-- botones de tema e idioma -->
+    <div class="fixed top-6 right-8 z-50 flex gap-4 items-center">
+      <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card">
+        <ThemeToggle />
+      </div>
+      <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card">
+        <LanguageToggle />
+      </div>
     </div>
     <slot />
     <Footer />
   </body>
 </html>
 <script src="/src/scripts/i18n.js"></script>
+<script src="/src/scripts/navbar.js" defer></script>

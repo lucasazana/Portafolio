@@ -1,16 +1,18 @@
+---
+import { Sun, Moon } from "@lucide/astro";
+---
+
 <div style="position:relative;display:inline-block;">
   <button
     type="button"
     id="theme-toggle-btn"
-    class="theme-button"
+    class="theme-button flex items-center justify-center w-10 h-10 rounded-xl bg-transparent border border-gengar-pastel shadow-none hover:bg-gray-100 dark:hover:bg-dark-card transition duration-300"
     aria-label="Cambiar tema"
   >
-    <span id="selected-theme">Tema</span>
+    <span id="theme-icon">
+      <Sun class="w-6 h-6" style="display:block;" />
+      <Moon class="w-6 h-6" style="display:none;" />
+    </span>
   </button>
-  <div id="theme-menu" style="display:none; position:absolute;">
-    <button type="button" data-theme="light">Claro</button>
-    <br />
-    <button type="button" data-theme="dark">Oscuro</button>
-  </div>
 </div>
 <script src="/src/scripts/toggleTheme.js"></script>

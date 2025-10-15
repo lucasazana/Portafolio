@@ -1,9 +1,9 @@
 {
     "home": {
-        "hero_name": "Lucas Azaña",
-        "hero_title": "Desarrollador Full Stack & Estudiante de Ingeniería de Software",
-        "hero_tagline": "(Si, lo mas probable es que este programando a las 3 AM)",
-        "hero_subtitle": "Hago que las ideas se hagan realidad y se vean bien, incluso las que no deberían. Uso IA para mejorar las cosas, no para echarle la culpa (esa sigue siendo mía).",
+    "hero_name": "Lucas Azaña",
+    "hero_title_1": "Desarrollador Full Stack &",
+    "hero_title_2": "Estudiante de Ingeniería de Software",
+        "hero_subtitle": "Hago que las ideas se hagan realidad y se vean bien, incluso las que no deberían. La IA llego para mejorar las cosas, no para echarle la culpa.",
         "hero_cv": "Descarga mi CV",
         "hero_idea": "Dime tu idea",
         "hero_year": "Año en el área",
@@ -111,7 +111,6 @@
         "option_automation": "Automatización",
         "option_other": "Otros",
         "modal_title": "Contacto Rápido",
-        "modal_close": "Cerrar",
         "social_title": "Contactame por medio de redes sociales",
         "linkedin": "LinkedIn",
         "github": "GitHub",
