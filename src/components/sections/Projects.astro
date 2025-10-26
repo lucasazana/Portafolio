@@ -2,23 +2,34 @@
 import ProjectCard from "../ui/projects/ProjectCard.astro";
 ---
 
-<section id="projects" class="projects" aria-labelledby="projects-title">
+<section
+  id="projects"
+  class="projects bg-light-bg dark:bg-dark-bg transition-colors duration-300"
+  aria-labelledby="projects-title"
+>
   <div class="projects-container">
-    <header class="projects-header">
-      <h2 id="projects-title" data-i18n="projects.projects_title">
+    <header class="projects-header text-center">
+      <h2
+        id="projects-title"
+        data-i18n="projects.projects_title"
+        class="text-4xl md:text-5xl font-extrabold text-black dark:text-white mb-3 drop-shadow-lg"
+      >
         Zona de Desarrollo
       </h2>
-      <p class="projects-tagline" data-i18n="projects.projects_tagline">
+      <p
+        class="projects-tagline text-base md:text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto text-center"
+        data-i18n="projects.projects_tagline"
+      >
         Un vistazo a lo que sé hacer cuando el deadline está cerca.
       </p>
     </header>
 
-    <div class="projects-grid" role="list">
+    <div class="projects-grid flex flex-col items-center gap-8" role="list">
       <ProjectCard
         imageUrl="/img/projects/tienda.webp"
         title="4ZLO – Tienda Vintage Online"
         description="Una plataforma creada para llevar el estilo vintage al mundo digital. Permite explorar y descubrir prendas únicas, con una experiencia intuitiva y moderna. Pensada para ofrecer una gestión sencilla al administrador y una navegación fluida para el cliente."
-        technologies={["Laravel", "Blade", "Tailwind CSS", "MySQL"]}
+        technologies={["Laravel", "PHP", "Tailwind CSS", "MySQL"]}
         codeLink="https://github.com/lucasazana/Tienda-4ZLO"
         category="E-commerce/Web App"
         dataI18nTitle="projects.project_4zlo_title"
@@ -47,7 +58,7 @@ import ProjectCard from "../ui/projects/ProjectCard.astro";
         imageUrl="/img/projects/portafolio.webp"
         title="Portafolio Personal"
         description="Un reflejo de mi trabajo, proceso y estilo como desarrollador. Construido con Astro y optimizado para rendimiento, accesibilidad y experiencia de usuario."
-        technologies={["Astro", "Tailwind CSS", "TypeScript"]}
+        technologies={["Astro", "Tailwind CSS"]}
         codeLink="https://github.com/lucasazana/Portafolio"
         category="Desarrollo Web"
         dataI18nTitle="projects.project_portfolio_title"

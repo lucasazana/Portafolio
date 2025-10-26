@@ -30,20 +30,34 @@ const {
 } = Astro.props;
 ---
 
-<div class="projects-card">
+<div
+  class="rounded-2xl bg-white dark:bg-dark-card/80 border border-gray-300 dark:border-transparent shadow-lg hover:shadow-gengar-lg p-4 md:p-6 flex flex-col gap-4 max-w-xl mx-auto transition-transform duration-300 ease-out hover:-translate-y-2"
+>
   <!-- imagen con overlay -->
-  <div class="projects-image">
-    <img src={imageUrl} alt={title} />
-    <div class="projects-category" data-i18n-category={dataI18nCategory}>
+  <div class="relative overflow-hidden rounded-xl mb-2 group">
+    <img
+      src={imageUrl}
+      alt={title}
+      class="w-full h-44 object-cover object-center"
+    />
+    <span
+      class="absolute left-0 bottom-0 px-4 py-2 text-white font-semibold text-base bg-black/60 rounded-tr-xl rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none select-none"
+      data-i18n-category={dataI18nCategory}
+    >
       {category}
-    </div>
+    </span>
   </div>
   <!-- contenido de la card -->
-  <div class="project-card-content">
+  <div class="flex flex-col gap-2 flex-1">
     <!-- header de la card -->
-    <div class="project-header">
-      <h3 class="project-title" data-i18n-title={dataI18nTitle}>{title}</h3>
-      <div class="project-links">
+    <div class="flex items-start justify-between gap-2">
+      <h3
+        class="text-2xl font-extrabold text-gray-900 dark:text-white leading-tight"
+        data-i18n-title={dataI18nTitle}
+      >
+        {title}
+      </h3>
+      <div class="flex gap-2 mt-1">
         {
           demoLink && (
             <a
@@ -51,8 +65,9 @@ const {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver Demo"
+              class="bg-gengar-pastel/20 hover:bg-gengar-pastel/40 text-gengar-primary rounded-full p-2 transition-colors"
             >
-              <ExternalLink size="16" />
+              <ExternalLink size="20" />
             </a>
           )
         }
@@ -63,31 +78,44 @@ const {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver código"
+              class="bg-gengar-pastel/20 hover:bg-gengar-pastel/40 text-gengar-primary rounded-full p-2 transition-colors"
             >
-              {" "}
-              <Github size="16" />{" "}
+              <Github size="20" />
             </a>
           )
         }
       </div>
     </div>
     <!-- description de la card -->
-    <p class="project-description" data-i18n-desc={dataI18nDesc}>
+    <p
+      class="text-gray-600 dark:text-dark-subtext text-base font-medium mb-1"
+      data-i18n-desc={dataI18nDesc}
+    >
       {description}
     </p>
     <!-- tecnologias usadas -->
-    <div class="project-technologies">
-      {technologies.map((tech) => <span class="tech-tag">{tech}</span>)}
+    <div class="flex flex-wrap gap-2 my-2">
+      {
+        technologies.map((tech) => (
+          <span class="px-3 py-1 rounded-full text-sm font-semibold bg-gray-100 dark:bg-dark-bg/40 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gengar-pastel/20">
+            {tech}
+          </span>
+        ))
+      }
     </div>
-    <!-- stats de la card (solo si es neceario)-->
+    <!-- stats de la card (solo si es necesario) -->
     {
       stats && stats.length > 0 && (
-        <div class="project-stats">
-          {" "}
+        <div class="flex flex-row justify-between items-center border-t border-gray-200 dark:border-gengar-pastel/20 pt-3 mt-2 gap-2">
           {stats.map((stat) => (
-            <div class="stat">
-              <span class="stat-value">{stat.value}</span>
-              <span class="stat-label" data-i18n-label={stat.dataI18nLabel}>
+            <div class="flex flex-col items-center flex-1">
+              <span class="text-xl font-bold text-gengar-primary dark:text-gengar-pastel">
+                {stat.value}
+              </span>
+              <span
+                class="text-xs text-gray-500 dark:text-dark-subtext font-semibold mt-1"
+                data-i18n-label={stat.dataI18nLabel}
+              >
                 {stat.label}
               </span>
             </div>
