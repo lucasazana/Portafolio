@@ -2,40 +2,66 @@
 import { Mail, MapPin, Clock } from "@lucide/astro";
 ---
 
-<div class="contact-info-card">
-  <h3 data-i18n="contact.info_title">Trabajemos en algo juntos</h3>
-  <ul class="contact-info-list">
-    <li class="contact-info-item">
-      <span class="contact-info-icon">
-        <Mail size="24" aria-hidden="true" />
+<div
+  class="rounded-2xl bg-white dark:bg-dark-card/80 shadow-lg border border-gray-200 dark:border-none p-8 w-full"
+>
+  <h3
+    data-i18n="contact.info_title"
+    class="text-2xl font-bold text-gray-900 dark:text-white mb-6"
+  >
+    Trabajemos en algo juntos
+  </h3>
+  <ul class="flex flex-col gap-5">
+    <li class="flex items-center gap-4">
+      <span
+        class="flex items-center justify-center rounded-xl bg-gengar-pastel/30 dark:bg-gengar-pastel/10 text-gengar-primary dark:text-gengar-pastel w-12 h-12"
+      >
+        <Mail size="28" aria-hidden="true" />
       </span>
       <div>
-        <strong data-i18n="contact.info_mail_label">Correo</strong><br />
-        <span data-i18n="contact.info_mail_value">idontcarelucas@gmail.com</span
+        <span
+          class="block font-semibold text-gray-800 dark:text-gray-200 text-base"
+          data-i18n="contact.info_mail_label">Correo</span
+        >
+        <span
+          class="block text-gray-500 dark:text-gray-400 text-sm"
+          data-i18n="contact.info_mail_value">idontcarelucas@gmail.com</span
         >
       </div>
     </li>
-    <li class="contact-info-item">
-      <span class="contact-info-icon">
-        <MapPin size="24" aria-hidden="true" />
+    <li class="flex items-center gap-4">
+      <span
+        class="flex items-center justify-center rounded-xl bg-gengar-pastel/30 dark:bg-gengar-pastel/10 text-gengar-primary dark:text-gengar-pastel w-12 h-12"
+      >
+        <MapPin size="28" aria-hidden="true" />
       </span>
       <div>
-        <strong data-i18n="contact.info_availability_label"
-          >Disponibilidad</strong
-        ><br />
-        <span data-i18n="contact.info_availability_value"
+        <span
+          class="block font-semibold text-gray-800 dark:text-gray-200 text-base"
+          data-i18n="contact.info_availability_label">Disponibilidad</span
+        >
+        <span
+          class="block text-gray-500 dark:text-gray-400 text-sm"
+          data-i18n="contact.info_availability_value"
           >Practicamente en todo el mundo</span
         >
       </div>
     </li>
-    <li class="contact-info-item">
-      <span class="contact-info-icon">
-        <Clock size="24" aria-hidden="true" />
+    <li class="flex items-center gap-4">
+      <span
+        class="flex items-center justify-center rounded-xl bg-gengar-pastel/30 dark:bg-gengar-pastel/10 text-gengar-primary dark:text-gengar-pastel w-12 h-12"
+      >
+        <Clock size="28" aria-hidden="true" />
       </span>
       <div>
-        <strong data-i18n="contact.info_time_label">Tiempo de espera</strong><br
-        />
-        <span data-i18n="contact.info_time_value">En menos de 12 horas</span>
+        <span
+          class="block font-semibold text-gray-800 dark:text-gray-200 text-base"
+          data-i18n="contact.info_time_label">Tiempo de espera</span
+        >
+        <span
+          class="block text-gray-500 dark:text-gray-400 text-sm"
+          data-i18n="contact.info_time_value">En menos de 12 horas</span
+        >
       </div>
     </li>
   </ul>

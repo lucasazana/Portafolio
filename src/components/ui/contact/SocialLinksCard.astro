@@ -2,22 +2,37 @@
 import { Linkedin, Github } from "@lucide/astro";
 ---
 
-<div class="social-links-card">
-  <h3 data-i18n="contact.social_title">
-    Contactame por medio de redes sociales
+<div
+  class="rounded-2xl bg-white dark:bg-dark-card/80 shadow-lg border border-gray-200 dark:border-none p-8 w-full"
+>
+  <h3
+    data-i18n="contact.social_title"
+    class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center"
+  >
+    Contáctame por medio de redes sociales
   </h3>
-  <div class="social-links">
-    <a href="https://github.com/lucasazana" target="_blank" rel="noopener">
-      <Linkedin size="24" aria-label="LinkedIn" />
-      <span data-i18n="contact.linkedin">LinkedIn</span>
-    </a>
+  <div class="flex flex-row gap-4 justify-center">
     <a
       href="https://www.linkedin.com/in/lucas-aza%C3%B1a-232bb3338/"
       target="_blank"
       rel="noopener"
+      class="flex flex-col items-center justify-center gap-2 rounded-xl bg-gengar-pastel/30 dark:bg-gengar-pastel/10 text-gengar-primary dark:text-gengar-pastel px-5 py-3 min-w-[100px] transition-colors duration-200 hover:bg-gengar-pastel/60 dark:hover:bg-gengar-pastel/20 shadow-md"
     >
-      <Github size="24" aria-label="GitHub" />
-      <span data-i18n="contact.github">GitHub</span>
+      <Linkedin size="20" aria-label="LinkedIn" />
+      <span class="font-semibold text-sm" data-i18n="contact.linkedin"
+        >LinkedIn</span
+      >
+    </a>
+    <a
+      href="https://github.com/lucasazana"
+      target="_blank"
+      rel="noopener"
+      class="flex flex-col items-center justify-center gap-2 rounded-xl bg-gengar-pastel/30 dark:bg-gengar-pastel/10 text-gengar-primary dark:text-gengar-pastel px-5 py-3 min-w-[100px] transition-colors duration-200 hover:bg-gengar-pastel/60 dark:hover:bg-gengar-pastel/20 shadow-md"
+    >
+      <Github size="20" aria-label="GitHub" />
+      <span class="font-semibold text-sm" data-i18n="contact.github"
+        >GitHub</span
+      >
     </a>
   </div>
 </div>
