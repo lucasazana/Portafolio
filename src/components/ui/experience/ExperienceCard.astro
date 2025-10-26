@@ -46,37 +46,52 @@ const {
 } = Astro.props;
 ---
 
-<div class="experience-card">
+<div
+  class="rounded-2xl bg-white dark:bg-dark-card/80 border border-gray-200 dark:border-gengar-pastel/30 shadow-lg hover:shadow-gengar-lg p-6 flex flex-col gap-4 max-w-2xl mx-auto transition-transform duration-300 ease-out hover:-translate-y-2"
+>
   <!-- header con fechas y estado -->
-  <div class="experience-header">
-    <div class="experience-date">
-      <span class="start-date" data-i18n-start={dataI18nStart}>{startDate}</span
-      >
-      <span class="date-separator"> - </span>
-      <span class="end-date" data-i18n-end={dataI18nEnd}>{endDate}</span>
+  <div class="flex items-start justify-between mb-2">
+    <div
+      class="flex items-center gap-2 text-gray-600 dark:text-dark-subtext text-base font-medium"
+    >
+      <span class="" data-i18n-start={dataI18nStart}>{startDate}</span>
+      <span class="">-</span>
+      <span class="" data-i18n-end={dataI18nEnd}>{endDate}</span>
     </div>
     {
       status && (
-        <span class="experience-status" data-i18n-status={dataI18nStatus}>
+        <span
+          class="px-4 py-1 rounded-full bg-gengar-pastel/20 text-gengar-primary dark:bg-gengar-pastel/30 dark:text-gengar-pastel text-sm font-semibold ml-2 select-none"
+          data-i18n-status={dataI18nStatus}
+        >
           {status}
         </span>
       )
     }
   </div>
   <!-- contenido de la card -->
-  <div class="experience-content">
-    <h3 class="experience-title" data-i18n-title={dataI18nTitle}>{title}</h3>
-    <div class="experience-company-info">
-      <h4 class="experience-company" data-i18n-company={dataI18nCompany}>
+  <div class="flex flex-col gap-2 flex-1">
+    <h3
+      class="text-2xl font-extrabold text-gray-900 dark:text-white leading-tight mb-1"
+      data-i18n-title={dataI18nTitle}
+    >
+      {title}
+    </h3>
+    <div class="flex items-center gap-2 mb-1">
+      <h4
+        class="text-lg font-semibold text-gray-700 dark:text-dark-heading"
+        data-i18n-company={dataI18nCompany}
+      >
         {company}
       </h4>
-      <span class="experience-modality" data-i18n-modality={dataI18nModality}
-        >{modality}</span
+      <span
+        class="text-sm text-gray-500 dark:text-dark-subtext"
+        data-i18n-modality={dataI18nModality}>{modality}</span
       >
       {
         location && (
           <span
-            class="experience-location"
+            class="text-sm text-gray-500 dark:text-dark-subtext"
             data-i18n-location={dataI18nLocation}
           >
             {location}
@@ -85,16 +100,22 @@ const {
       }
     </div>
     <!-- descripción -->
-    <p class="experience-description" data-i18n-desc={dataI18nDesc}>
+    <p
+      class="text-gray-600 dark:text-dark-subtext text-base font-medium mb-1"
+      data-i18n-desc={dataI18nDesc}
+    >
       {description}
     </p>
     <!-- logros -->
     {
       achievements && achievements.length > 0 && (
-        <ul class="experience-achievements">
+        <ul class="flex flex-col gap-1 mb-2">
           {achievements.map((achievement, i) => (
-            <li class="achievement-item">
-              <CheckCheck size="16" class="achievement-check" />
+            <li class="flex items-center gap-2 text-gray-700 dark:text-dark-text text-base">
+              <CheckCheck
+                size="16"
+                class="text-gengar-primary dark:text-gengar-pastel"
+              />
               <span
                 data-i18n-achievement={
                   dataI18nAchievements ? dataI18nAchievements[i] : undefined
@@ -110,9 +131,11 @@ const {
     <!-- tecnologías -->
     {
       technologies && technologies.length > 0 && (
-        <div class="experience-technologies">
+        <div class="flex flex-wrap gap-2 mt-2">
           {technologies.map((tech) => (
-            <span class="tech-tag">{tech}</span>
+            <span class="px-3 py-1 rounded-full text-sm font-semibold bg-gray-100 dark:bg-dark-bg/40 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gengar-pastel/20">
+              {tech}
+            </span>
           ))}
         </div>
       )

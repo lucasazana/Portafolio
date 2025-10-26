@@ -2,77 +2,96 @@
 import ExperienceCard from "../ui/experience/ExperienceCard.astro";
 ---
 
-<section id="experience" class="experience" aria-labelledby="experience-title">
-  <div class="experience-container">
-    <header class="experience-header">
-      <h2 id="experience-title" data-i18n="experience.experience_title">
-        Mi Experiencia Profesional
-      </h2>
-      <p class="experience-tagline" data-i18n="experience.experience_tagline">
-        Proyectos reales, retos reales, resultados medibles.
-      </p>
-    </header>
-    <div class="experience-grid" role="list">
-      <ExperienceCard
-        title="Practicante de Desarrollo Web"
-        company="IBGROUP"
-        location="Lima, Perú"
-        modality="Remoto"
-        startDate="Mayo 2025"
-        endDate="Actualidad"
-        status="Actual"
-        description="Responsable de la mejora y optimización del sitio web institucional, implementando soluciones que optimizan tiempos de carga, integran APIs RESTful y mejoran la experiencia del usuario."
-        achievements={[
-          "Rediseñé el sitio web con enfoque en usabilidad y diseño responsive.",
-          "Implementé un chatbot personalizado para atención al cliente.",
-          "Mejoré los tiempos de carga aplicando optimización de recursos estáticos.",
-          "Integré APIs RESTful para una comunicación eficiente entre frontend y backend.",
-        ]}
-        technologies={["Laravel", "PHP", "JavaScript", "MariaDB", "Git"]}
-        dataI18nTitle="experience.exp_1_title"
-        dataI18nCompany="experience.exp_1_company"
-        dataI18nLocation="experience.exp_1_location"
-        dataI18nModality="experience.exp_1_modality"
-        dataI18nStart="experience.exp_1_start"
-        dataI18nEnd="experience.exp_1_end"
-        dataI18nStatus="experience.exp_1_status"
-        dataI18nDesc="experience.exp_1_desc"
-        dataI18nAchievements={[
-          "experience.exp_1_achievements.0",
-          "experience.exp_1_achievements.1",
-          "experience.exp_1_achievements.2",
-          "experience.exp_1_achievements.3",
-        ]}
-      />
-      <ExperienceCard
-        title="Asistente de Ingeniería de Datos"
-        company="MISD SOLUTIONS"
-        location="Lima, Perú"
-        modality="Híbrido"
-        startDate="Julio 2024"
-        endDate="Diciembre 2024"
-        status="6 meses"
-        description="Colaboré en el procesamiento, migración y visualización de datos, participando además en proyectos de inteligencia artificial y análisis de información."
-        achievements={[
-          "Apoyé en la migración y organización de bases de datos.",
-          "Desarrollé dashboards interactivos para la visualización de datos.",
-          "Participé en el entrenamiento de un modelo de IA para diagnóstico ocular.",
-        ]}
-        technologies={["Python", "Power BI", "Excel", "SQL", "MongoDB"]}
-        dataI18nTitle="experience.exp_2_title"
-        dataI18nCompany="experience.exp_2_company"
-        dataI18nLocation="experience.exp_2_location"
-        dataI18nModality="experience.exp_2_modality"
-        dataI18nStart="experience.exp_2_start"
-        dataI18nEnd="experience.exp_2_end"
-        dataI18nStatus="experience.exp_2_status"
-        dataI18nDesc="experience.exp_2_desc"
-        dataI18nAchievements={[
-          "experience.exp_2_achievements.0",
-          "experience.exp_2_achievements.1",
-          "experience.exp_2_achievements.2",
-        ]}
-      />
+<section
+  id="experience"
+  class="experience bg-light-bg dark:bg-dark-bg transition-colors duration-300 pt-16 md:pt-24"
+  aria-labelledby="experience-title"
+  <div
+  class="experience-container"
+>
+  <header class="experience-header text-center">
+    <h2
+      id="experience-title"
+      data-i18n="experience.experience_title"
+      class="text-4xl md:text-5xl font-extrabold text-black dark:text-white mb-3 drop-shadow-lg"
+    >
+      Mi Experiencia Profesional
+    </h2>
+    <p
+      class="experience-tagline text-base md:text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto text-center"
+      data-i18n="experience.experience_tagline"
+    >
+      Proyectos reales, retos reales, resultados medibles.
+    </p>
+  </header>
+  <div class="experience-grid flex flex-col gap-8" role="list">
+    <div class="flex justify-start w-full max-w-5xl mx-auto">
+      <div class="w-full md:w-2/3 lg:w-1/2">
+        <ExperienceCard
+          title="Practicante de Desarrollo Web"
+          company="IBGROUP"
+          location="Lima, Perú"
+          modality="Remoto"
+          startDate="Mayo 2025"
+          endDate="Actualidad"
+          status="Actual"
+          description="Responsable de la mejora y optimización del sitio web institucional, implementando soluciones que optimizan tiempos de carga, integran APIs RESTful y mejoran la experiencia del usuario."
+          achievements={[
+            "Rediseñé el sitio web con enfoque en usabilidad y diseño responsive.",
+            "Implementé un chatbot personalizado para atención al cliente.",
+            "Mejoré los tiempos de carga aplicando optimización de recursos estáticos.",
+            "Integré APIs RESTful para una comunicación eficiente entre frontend y backend.",
+          ]}
+          technologies={["Laravel", "PHP", "JavaScript", "MariaDB", "Git"]}
+          dataI18nTitle="experience.exp_1_title"
+          dataI18nCompany="experience.exp_1_company"
+          dataI18nLocation="experience.exp_1_location"
+          dataI18nModality="experience.exp_1_modality"
+          dataI18nStart="experience.exp_1_start"
+          dataI18nEnd="experience.exp_1_end"
+          dataI18nStatus="experience.exp_1_status"
+          dataI18nDesc="experience.exp_1_desc"
+          dataI18nAchievements={[
+            "experience.exp_1_achievements.0",
+            "experience.exp_1_achievements.1",
+            "experience.exp_1_achievements.2",
+            "experience.exp_1_achievements.3",
+          ]}
+        />
+      </div>
+    </div>
+    <div class="flex justify-end w-full max-w-5xl mx-auto">
+      <div class="w-full md:w-2/3 lg:w-1/2">
+        <ExperienceCard
+          title="Asistente de Ingeniería de Datos"
+          company="MISD SOLUTIONS"
+          location="Lima, Perú"
+          modality="Híbrido"
+          startDate="Julio 2024"
+          endDate="Diciembre 2024"
+          status="6 meses"
+          description="Colaboré en el procesamiento, migración y visualización de datos, participando además en proyectos de inteligencia artificial y análisis de información."
+          achievements={[
+            "Apoyé en la migración y organización de bases de datos.",
+            "Desarrollé dashboards interactivos para la visualización de datos.",
+            "Participé en el entrenamiento de un modelo de IA para diagnóstico ocular.",
+          ]}
+          technologies={["Python", "Power BI", "Excel", "SQL", "Colab"]}
+          dataI18nTitle="experience.exp_2_title"
+          dataI18nCompany="experience.exp_2_company"
+          dataI18nLocation="experience.exp_2_location"
+          dataI18nModality="experience.exp_2_modality"
+          dataI18nStart="experience.exp_2_start"
+          dataI18nEnd="experience.exp_2_end"
+          dataI18nStatus="experience.exp_2_status"
+          dataI18nDesc="experience.exp_2_desc"
+          dataI18nAchievements={[
+            "experience.exp_2_achievements.0",
+            "experience.exp_2_achievements.1",
+            "experience.exp_2_achievements.2",
+          ]}
+        />
+      </div>
     </div>
   </div>
 </section>
