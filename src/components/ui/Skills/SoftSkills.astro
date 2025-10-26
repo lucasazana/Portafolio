@@ -10,7 +10,11 @@ import {
 } from "@lucide/astro";
 ---
 
-<div id="soft-skills-cards" class="skills-grid" style="display: none;">
+<div
+  id="soft-skills-cards"
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto"
+  style="display: none;"
+>
   <SkillCardLucide
     icon={MessageSquare}
     title="Comunicación activa"

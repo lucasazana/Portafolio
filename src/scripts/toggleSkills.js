@@ -3,14 +3,32 @@
   const hardSkills = document.getElementById("hard-skills-cards");
   const softSkills = document.getElementById("soft-skills-cards");
 
-  hardButton?.addEventListener("click", () => {
-    hardButton.classList.add("active");
-    hardButton.setAttribute("aria-pressed", "true");
-    hardButton.setAttribute("aria-selected", "true");
-    softButton?.classList.remove("active");
-    softButton?.setAttribute("aria-pressed", "false");
-    softButton?.setAttribute("aria-selected", "false");
+  function setToggleVisual(active) {
+    if (!hardButton || !softButton) return;
+    const base =
+      "toggle-button px-8 py-2 rounded-xl text-base md:text-lg font-semibold transition-all duration-250 shadow-none border-none";
+    const activeClass = hardButton.dataset.activeClass || "bg-gengar-primary text-white";
+    const inactiveClass = hardButton.dataset.inactiveClass || "bg-transparent text-gengar-primary dark:text-gengar-light";
 
+    if (active === "hard") {
+      hardButton.className = `${activeClass} ${base}`;
+      softButton.className = `${inactiveClass} ${base}`;
+      hardButton.setAttribute("aria-pressed", "true");
+      hardButton.setAttribute("aria-selected", "true");
+      softButton.setAttribute("aria-pressed", "false");
+      softButton.setAttribute("aria-selected", "false");
+    } else {
+      softButton.className = `${activeClass} ${base}`;
+      hardButton.className = `${inactiveClass} ${base}`;
+      softButton.setAttribute("aria-pressed", "true");
+      softButton.setAttribute("aria-selected", "true");
+      hardButton.setAttribute("aria-pressed", "false");
+      hardButton.setAttribute("aria-selected", "false");
+    }
+  }
+
+  hardButton?.addEventListener("click", () => {
+    setToggleVisual("hard");
     if (hardSkills) {
       hardSkills.style.display = "grid";
       hardSkills.setAttribute("aria-hidden", "false");
@@ -22,13 +40,7 @@
   });
 
   softButton?.addEventListener("click", () => {
-    softButton.classList.add("active");
-    softButton.setAttribute("aria-pressed", "true");
-    softButton.setAttribute("aria-selected", "true");
-    hardButton?.classList.remove("active");
-    hardButton?.setAttribute("aria-pressed", "false");
-    hardButton?.setAttribute("aria-selected", "false");
-
+    setToggleVisual("soft");
     if (softSkills) {
       softSkills.style.display = "grid";
       softSkills.setAttribute("aria-hidden", "false");
@@ -38,3 +50,6 @@
       hardSkills.setAttribute("aria-hidden", "true");
     }
   });
+
+  // Inicializa el estado visual correcto al cargar
+  setToggleVisual("hard");

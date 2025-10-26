@@ -4,54 +4,84 @@ import SoftSkills from "../ui/Skills/SoftSkills.astro";
 import ExtraSkills from "../ui/Skills/ExtraSkills.astro";
 ---
 
-<section id="skills" class="skills" aria-labelledby="skills-title">
-  <div class="skills-container">
-    <header class="skills-header">
-      <h2 id="skills-title" data-i18n="skills.skills_title">Habilidades</h2>
-      <p class="skills-tagline" data-i18n="skills.skills_tagline">
+<section
+  id="skills"
+  class="skills bg-light-bg dark:bg-dark-bg py-16"
+  aria-labelledby="skills-title"
+>
+  <div class="skills-container max-w-5xl mx-auto px-4">
+    <header class="skills-header text-center mb-8">
+      <h2
+        id="skills-title"
+        class="text-4xl font-bold text-black dark:text-white mb-4 drop-shadow-lg"
+        data-i18n="skills.skills_title"
+      >
+        Habilidades
+      </h2>
+      <p
+        class="skills-tagline text-lg text-light-subtext dark:text-dark-subtext max-w-2xl mx-auto"
+        data-i18n="skills.skills_tagline"
+      >
         No busco saberlo todo, pero sí entender lo suficiente para hacerlo bien.
         Lo que sé, lo aplico; lo que no, lo aprendo rápido.
       </p>
     </header>
     <!-- botones -->
     <nav
-      class="skills-toggle"
+      class="skills-toggle flex justify-center mb-8"
       role="tablist"
       aria-label="Filtros de habilidades"
     >
-      <button
-        id="hard-skills-button"
-        class="toggle-button active"
-        role="tab"
-        aria-pressed="true"
-        aria-controls="hard-skills-cards"
-        aria-selected="true"
-        data-i18n="skills.skills_hard"
+      <div
+        class="inline-flex gap-4 border border-gengar-pastel/40 rounded-2xl p-2 bg-white/60 dark:bg-dark-card/60"
       >
-        Hard Skills
-      </button>
-      <button
-        id="soft-skills-button"
-        class="toggle-button"
-        role="tab"
-        aria-pressed="false"
-        aria-controls="soft-skills-cards"
-        aria-selected="false"
-        data-i18n="skills.skills_soft"
-      >
-        Soft Skills
-      </button>
+        <button
+          id="hard-skills-button"
+          class="toggle-button active px-6 py-2 rounded-xl font-medium text-gengar-primary dark:text-gengar-pastel bg-light-card dark:bg-dark-card shadow-card transition-colors duration-250 ease-in-out"
+          role="tab"
+          aria-pressed="true"
+          aria-controls="hard-skills-cards"
+          aria-selected="true"
+          data-i18n="skills.skills_hard"
+        >
+          Hard Skills
+        </button>
+        <button
+          id="soft-skills-button"
+          class="toggle-button px-6 py-2 rounded-xl font-medium text-gengar-primary dark:text-gengar-pastel bg-light-card dark:bg-dark-card shadow-card transition-colors duration-250 ease-in-out"
+          role="tab"
+          aria-pressed="false"
+          aria-controls="soft-skills-cards"
+          aria-selected="false"
+          data-i18n="skills.skills_soft"
+        >
+          Soft Skills
+        </button>
+      </div>
     </nav>
     <!-- tarjetas hard skills -->
-    <HardSkills />
+    <div class="flex justify-center">
+      <HardSkills />
+    </div>
     <!-- tarjetas soft skills -->
-    <SoftSkills />
-    <aside class="skills-extra" aria-labelledby="extra-skills-title">
-      <h3 id="extra-skills-title" data-i18n="skills.skills_extra_title">
-        Habilidades adicionales
-      </h3>
-      <!-- tarjetas extra skills -->
-      <ExtraSkills />
+    <div class="flex justify-center">
+      <SoftSkills />
+    </div>
+    <aside
+      class="skills-extra mt-10 text-center"
+      aria-labelledby="extra-skills-title"
+    >
+      <div id="extra-skills-cards-container">
+        <h3
+          id="extra-skills-title"
+          class="text-2xl font-semibold text-black dark:text-white mb-4"
+          data-i18n="skills.skills_extra_title"
+        >
+          Habilidades adicionales
+        </h3>
+        <!-- tarjetas extra skills -->
+        <ExtraSkills />
+      </div>
     </aside>
   </div>
 </section>

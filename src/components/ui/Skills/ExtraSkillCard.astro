@@ -1,0 +1,32 @@
+---
+interface ExtraSkillProps {
+  icon: any;
+  title: string;
+  dataI18nTitle?: string;
+}
+
+const { icon, title, dataI18nTitle, iconColor } = Astro.props;
+---
+
+<div
+  class="border border-gengar-pastel/40 rounded-2xl p-4 mx-2 w-72 min-h-[140px] flex flex-col items-center justify-center text-center text-black dark:text-white"
+>
+  <div class="skill-header flex flex-col items-center justify-center h-full">
+    <div class="skill-icon mb-2">
+      <svg
+        viewBox="0 0 24 24"
+        width="32"
+        height="32"
+        fill={iconColor || "currentColor"}
+      >
+        <path d={icon.path}></path>
+      </svg>
+    </div>
+    <h3
+      class="skill-title font-semibold text-lg"
+      data-i18n-title={dataI18nTitle}
+    >
+      {title}
+    </h3>
+  </div>
+</div>

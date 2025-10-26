@@ -10,13 +10,17 @@ import {
 } from "simple-icons";
 ---
 
-<div id="hard-skills-cards" class="skills-grid">
+<div
+  id="hard-skills-cards"
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto"
+>
   <SkillCardSimple
     icon={siLaravel}
     title="Laravel"
     description="Experiencia en Laravel para crear APIs, paneles administrativos y sistemas con autenticación segura y buenas prácticas."
     dataI18nTitle="skills.skills_hard_laravel"
     dataI18nDesc="skills.skills_hard_laravel_desc"
+    iconColor="#FF2D20"
   />
 
   <SkillCardSimple
@@ -25,6 +29,7 @@ import {
     description="Experiencia en Astro para crear sitios rápidos, optimizados y con una arquitectura enfocada en rendimiento y escalabilidad."
     dataI18nTitle="skills.skills_hard_astro"
     dataI18nDesc="skills.skills_hard_astro_desc"
+    iconColor="#BC52EE"
   />
 
   <SkillCardSimple
@@ -33,6 +38,7 @@ import {
     description="Experiencia en JavaScript para desarrollar funciones interactivas, dinámicas y enfocadas en la experiencia del usuario."
     dataI18nTitle="skills.skills_hard_javascript"
     dataI18nDesc="skills.skills_hard_javascript_desc"
+    iconColor="#F7DF1E"
   />
 
   <SkillCardSimple
@@ -41,6 +47,7 @@ import {
     description="Experiencia en Tailwind CSS para crear interfaces consistentes, rápidas y con un flujo de desarrollo eficiente."
     dataI18nTitle="skills.skills_hard_tailwindcss"
     dataI18nDesc="skills.skills_hard_tailwindcss_desc"
+    iconColor="#06B6D4"
   />
 
   <SkillCardSimple
@@ -49,6 +56,7 @@ import {
     description="Experiencia en React para desarrollar componentes modulares, reutilizables"
     dataI18nTitle="skills.skills_hard_react"
     dataI18nDesc="skills.skills_hard_react_desc"
+    iconColor="#61DAFB"
   />
 
   <SkillCardSimple
@@ -57,5 +65,6 @@ import {
     description="Experiencia en Python para automatizar procesos, analizar datos y experimentar con herramientas de IA."
     dataI18nTitle="skills.skills_hard_python"
     dataI18nDesc="skills.skills_hard_python_desc"
+    iconColor="#3776AB"
   />
 </div>

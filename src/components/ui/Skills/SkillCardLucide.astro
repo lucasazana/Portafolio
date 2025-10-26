@@ -16,12 +16,24 @@ const {
 } = Astro.props;
 ---
 
-<div class="skill-card">
-  <div class="skill-header">
-    <div class="skill-icon">
-      <Icon size="32" />
+<div
+  class="skill-card border-2 border-gengar-pastel/40 rounded-2xl bg-white/80 dark:bg-dark-card/80 shadow-card transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl p-8 min-h-[220px] flex flex-col items-center justify-between text-light-text dark:text-dark-text text-center"
+>
+  <div class="skill-header flex flex-col items-center mb-4">
+    <div class="skill-icon mb-2">
+      <Icon size="40" />
     </div>
-    <h3 class="skill-title" data-i18n-title={dataI18nTitle}>{title}</h3>
+    <h3
+      class="skill-title font-bold text-xl mb-2"
+      data-i18n-title={dataI18nTitle}
+    >
+      {title}
+    </h3>
   </div>
-  <p class="skill-description" data-i18n-desc={dataI18nDesc}>{description}</p>
+  <p
+    class="skill-description text-base leading-relaxed text-light-subtext dark:text-dark-subtext font-medium"
+    data-i18n-desc={dataI18nDesc}
+  >
+    {description}
+  </p>
 </div>
