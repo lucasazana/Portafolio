@@ -10,48 +10,98 @@ import {
 } from "simple-icons";
 ---
 
-<div
-  id="extra-skills-cards"
-  class="flex flex-row gap-8 justify-center items-stretch"
->
-  <ExtraSkillCard
-    icon={siSpring}
-    title="Spring"
-    dataI18nTitle="skills.extra_spring"
-    iconColor="#6DB33F"
-  />
-
-  <ExtraSkillCard
-    icon={siMysql}
-    title="MySQL"
-    dataI18nTitle="skills.extra_mysql"
-    iconColor="#4479A1"
-  />
-  <ExtraSkillCard
-    icon={siIcloud}
-    title="Servicios Web"
-    dataI18nTitle="skills.extra_web"
-    iconColor="#3693F3"
-  />
-
-  <ExtraSkillCard
-    icon={siGit}
-    title="Git"
-    dataI18nTitle="skills.extra_git"
-    iconColor="#F05032"
-  />
-
-  <ExtraSkillCard
-    icon={siGithub}
-    title="Power BI"
-    dataI18nTitle="skills.extra_powerbi"
-    iconColor="#181717"
-  />
-
-  <ExtraSkillCard
-    icon={siClaude}
-    title="Asistentes de IA"
-    dataI18nTitle="skills.extra_ai"
-    iconColor="#D97757"
-  />
+<div id="extra-skills-cards-carrusel" class="relative w-full overflow-x-hidden">
+  <div
+    id="extra-skills-track"
+    class="flex flex-nowrap gap-5 sm:gap-6 md:gap-8 py-2 px-1 w-max animate-extra-skills-carrusel"
+    style="will-change: transform;"
+  >
+    <ExtraSkillCard
+      icon={siSpring}
+      title="Spring"
+      dataI18nTitle="skills.extra_spring"
+      iconColor="#6DB33F"
+    />
+    <ExtraSkillCard
+      icon={siMysql}
+      title="MySQL"
+      dataI18nTitle="skills.extra_mysql"
+      iconColor="#4479A1"
+    />
+    <ExtraSkillCard
+      icon={siIcloud}
+      title="Servicios Web"
+      dataI18nTitle="skills.extra_web"
+      iconColor="#3693F3"
+    />
+    <ExtraSkillCard
+      icon={siGit}
+      title="Git"
+      dataI18nTitle="skills.extra_git"
+      iconColor="#F05032"
+    />
+    <ExtraSkillCard
+      icon={siGithub}
+      title="Power BI"
+      dataI18nTitle="skills.extra_powerbi"
+      iconColor="#181717"
+    />
+    <ExtraSkillCard
+      icon={siClaude}
+      title="Asistentes de IA"
+      dataI18nTitle="skills.extra_ai"
+      iconColor="#D97757"
+    />
+    <!-- Duplicado para loop infinito -->
+    <ExtraSkillCard
+      icon={siSpring}
+      title="Spring"
+      dataI18nTitle="skills.extra_spring"
+      iconColor="#6DB33F"
+    />
+    <ExtraSkillCard
+      icon={siMysql}
+      title="MySQL"
+      dataI18nTitle="skills.extra_mysql"
+      iconColor="#4479A1"
+    />
+    <ExtraSkillCard
+      icon={siIcloud}
+      title="Servicios Web"
+      dataI18nTitle="skills.extra_web"
+      iconColor="#3693F3"
+    />
+    <ExtraSkillCard
+      icon={siGit}
+      title="Git"
+      dataI18nTitle="skills.extra_git"
+      iconColor="#F05032"
+    />
+    <ExtraSkillCard
+      icon={siGithub}
+      title="Power BI"
+      dataI18nTitle="skills.extra_powerbi"
+      iconColor="#181717"
+    />
+    <ExtraSkillCard
+      icon={siClaude}
+      title="Asistentes de IA"
+      dataI18nTitle="skills.extra_ai"
+      iconColor="#D97757"
+    />
+  </div>
 </div>
+<style>
+  @keyframes extra-skills-carrusel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-extra-skills-carrusel {
+    animation: extra-skills-carrusel 30s linear infinite;
+  }
+</style>
+<script src="/src/scripts/extraSkills.js"></script>
