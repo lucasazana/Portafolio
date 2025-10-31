@@ -4,40 +4,33 @@ import Navbar from "../components/ui/Navbar.astro";
 import Footer from "../components/ui/Footer.astro";
 import LanguageToggle from "../components/ui/LanguageToggle.astro";
 import ThemeToggle from "../components/ui/ThemeToggle.astro";
-import Seo from "../components/Seo.astro";
-const { title, description, image, url, author, keywords, favicon } =
-  Astro.props;
 ---
 
 <!doctype html>
 <html lang="es" class="light">
   <head>
-    <Seo
-      title={title}
-      description={description}
-      image={image}
-      url={url}
-      author={author}
-      keywords={keywords}
-      favicon={favicon}
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Portfolio Personal de Lucas Azaña - Desarrollador Full Stack"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <title>Lucas Azaña | Portafolio</title>
   </head>
   <body
-    class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter overflow-x-hidden"
+    class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter"
   >
     <Navbar />
     <!-- botones de tema e idioma responsive -->
     <div
-      class="fixed z-50 flex gap-2 items-center
-        top-auto bottom-4 left-1/2 -translate-x-1/2 right-auto
-        md:top-6 md:right-8 md:left-auto md:bottom-auto md:translate-x-0
-        justify-center md:justify-end"
+      class="fixed z-50 flex flex-col gap-2 items-end bottom-4 right-4 md:bottom-8 md:right-8 transition-all duration-300"
     >
       <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card p-2">
         <ThemeToggle />

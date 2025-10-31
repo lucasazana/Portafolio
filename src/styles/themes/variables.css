@@ -1,0 +1,9 @@
+/* Variables de color */
+:root {
+  --color-bg: #f8fafc;
+  --color-text: #18181b;
+}
+[data-theme="dark"] {
+  --color-bg: #18181b;
+  --color-text: #f8fafc;
+}
