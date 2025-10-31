@@ -47,21 +47,23 @@ const {
 ---
 
 <div
-  class="rounded-2xl bg-white dark:bg-dark-card/80 border border-gray-200 dark:border-gengar-pastel/30 shadow-lg hover:shadow-gengar-lg p-6 flex flex-col gap-4 max-w-2xl mx-auto transition-transform duration-300 ease-out hover:-translate-y-2"
+  class="rounded-2xl bg-white dark:bg-dark-card/80 border border-gray-200 dark:border-gengar-pastel/30 shadow-lg hover:shadow-gengar-lg p-4 md:p-6 flex flex-col gap-4 max-w-xs md:max-w-xl w-full mx-auto transition-transform duration-300 ease-out hover:-translate-y-2"
 >
   <!-- header con fechas y estado -->
-  <div class="flex items-start justify-between mb-2">
+  <div
+    class="flex flex-col items-start gap-1 mb-2 w-full max-w-xs sm:max-w-full md:max-w-xl mx-auto"
+  >
     <div
-      class="flex items-center gap-2 text-gray-600 dark:text-dark-subtext text-base font-medium"
+      class="flex items-center gap-2 text-gray-600 dark:text-dark-subtext text-base font-medium w-full"
     >
-      <span class="" data-i18n-start={dataI18nStart}>{startDate}</span>
-      <span class="">-</span>
-      <span class="" data-i18n-end={dataI18nEnd}>{endDate}</span>
+      <span data-i18n-start={dataI18nStart}>{startDate}</span>
+      <span>-</span>
+      <span data-i18n-end={dataI18nEnd}>{endDate}</span>
     </div>
     {
       status && (
         <span
-          class="px-4 py-1 rounded-full bg-gengar-pastel/20 text-gengar-primary dark:bg-gengar-pastel/30 dark:text-gengar-pastel text-sm font-semibold ml-2 select-none"
+          class="px-4 py-1 rounded-full bg-gengar-pastel/20 text-gengar-primary dark:bg-gengar-pastel/30 dark:text-gengar-pastel text-sm font-semibold select-none mt-1"
           data-i18n-status={dataI18nStatus}
         >
           {status}
@@ -70,7 +72,9 @@ const {
     }
   </div>
   <!-- contenido de la card -->
-  <div class="flex flex-col gap-2 flex-1">
+  <div
+    class="flex flex-col gap-2 flex-1 w-full max-w-xs sm:max-w-full md:max-w-xl mx-auto"
+  >
     <h3
       class="text-2xl font-extrabold text-gray-900 dark:text-white leading-tight mb-1"
       data-i18n-title={dataI18nTitle}

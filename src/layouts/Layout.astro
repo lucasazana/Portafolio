@@ -25,13 +25,15 @@ import ThemeToggle from "../components/ui/ThemeToggle.astro";
     <title>Lucas Azaña | Portafolio</title>
   </head>
   <body
-    class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter"
+    class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text min-h-screen font-inter overflow-x-hidden"
   >
     <Navbar />
-    <!-- botones de tema e idioma -->
+    <!-- botones de tema e idioma responsive -->
     <div
-      id="theme-lang-buttons"
-      class="fixed z-50 flex gap-2 items-center top-2 left-1/2 -translate-x-1/2 right-auto md:top-6 md:right-8 md:left-auto md:bottom-auto md:translate-x-0 justify-center md:justify-end transition-all duration-300"
+      class="fixed z-50 flex gap-2 items-center
+        top-auto bottom-4 left-1/2 -translate-x-1/2 right-auto
+        md:top-6 md:right-8 md:left-auto md:bottom-auto md:translate-x-0
+        justify-center md:justify-end"
     >
       <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card p-2">
         <ThemeToggle />

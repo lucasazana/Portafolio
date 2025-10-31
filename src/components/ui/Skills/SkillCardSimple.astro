@@ -13,7 +13,7 @@ const { icon, title, description, dataI18nTitle, dataI18nDesc, iconColor } =
 ---
 
 <div
-  class="skill-card border-2 border-gray-300 dark:border-transparent rounded-2xl bg-white/80 dark:bg-dark-card/80 shadow-card transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl p-8 min-h-[220px] flex flex-col items-center justify-between text-light-text dark:text-dark-text text-center"
+  class="skill-card border-2 border-gray-300 dark:border-transparent rounded-2xl bg-white/80 dark:bg-dark-card/80 shadow-card transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl p-8 min-h-[220px] flex flex-col items-center justify-between text-light-text dark:text-dark-text text-center max-w-xs w-full mx-auto"
 >
   <div class="skill-header flex flex-col items-center mb-4">
     <div class="skill-icon mb-2">
@@ -34,7 +34,7 @@ const { icon, title, description, dataI18nTitle, dataI18nDesc, iconColor } =
     </h3>
   </div>
   <p
-    class="skill-description text-base leading-relaxed text-light-subtext dark:text-dark-subtext font-medium"
+    class="skill-description text-base leading-relaxed text-light-subtext dark:text-dark-subtext font-medium break-words whitespace-normal"
     data-i18n-desc={dataI18nDesc}
   >
     {description}
