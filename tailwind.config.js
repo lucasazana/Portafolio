@@ -1,4 +1,13 @@
 module.exports = {
+  safelist: [
+    'bg-gengar',
+    'bg-gengar-pastel/40',
+    'shadow-gengar-strong',
+    'shadow-gengar-soft',
+    'text-dark-card',
+    'text-black',
+    'text-white',
+  ],
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"
   ],
@@ -15,30 +24,18 @@ module.exports = {
           pastel: "#C084FC",
           DEFAULT: "#4C2A85",
         },
-
-        // tema claro
-        light: {
-          bg: "#FFFFFF",
-          card: "#FEFEFF", 
-          text: "#1F2937",
-          heading: "#111827",
-          subtext: "#6B7280",
-        },
-
-        // tema oscuro
-        dark: {
-          bg: "#0F0A1A",
-          card: "#1A0D2E",
-          text: "#E5E7EB", 
-          heading: "#F9FAFB",
-          subtext: "#D1D5DB",
-        },
+        // utilidades directas para clases usadas en el navbar
+        'gengar': "#4C2A85",
+        'gengar-pastel': "#C084FC",
       },
-
-      // Sombras personalizadas Gengar
       boxShadow: {
+        // Sombras personalizadas Gengar
+        'gengar-strong': '0 10px 25px -5px rgba(76, 42, 133, 0.25), 0 4px 6px -2px rgba(76, 42, 133, 0.15)',
+        'gengar-soft': '0 4px 12px -2px rgba(192, 132, 252, 0.25)',
         'gengar': '0 10px 25px -5px rgba(76, 42, 133, 0.15), 0 4px 6px -2px rgba(76, 42, 133, 0.05)',
         'gengar-lg': '0 20px 40px -10px rgba(76, 42, 133, 0.2), 0 8px 16px -4px rgba(76, 42, 133, 0.1)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+        'floating': '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
       },
 
       fontFamily: {
