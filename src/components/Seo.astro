@@ -1,0 +1,32 @@
+---
+const baseUrl = "https://usuario.github.io/repo";
+const {
+  title = "Lucas Azaña | Portafolio",
+  description = "Portafolio profesional de Lucas Azaña, desarrollador web especializado en Astro, React, Tailwind y tecnologías modernas. Descubre mis proyectos, experiencia y habilidades.",
+  image = "",
+  url = baseUrl, // Cambia esto cuando publiques
+  author = "Lucas Azaña",
+  keywords = "Lucas Azaña, portafolio, desarrollador web, frontend, Astro, React, Tailwind, proyectos, experiencia, skills",
+  favicon = "",
+} = Astro.props;
+---
+
+<head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content={author} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {favicon && <link rel="icon" href={favicon} type="image/x-icon" />}
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lucas Azaña",
+      "url": url,
+      "jobTitle": "Desarrollador Web",
+      "description": description
+    })}
+  </script>
+</head>

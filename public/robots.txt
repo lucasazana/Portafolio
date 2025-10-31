@@ -1,1 +1,3 @@
-# robots.txt placeholder
+User-agent: *
+Allow: /
+Sitemap: https://usuario.github.io/repo/sitemap.xml
