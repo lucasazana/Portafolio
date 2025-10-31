@@ -29,11 +29,14 @@ import ThemeToggle from "../components/ui/ThemeToggle.astro";
   >
     <Navbar />
     <!-- botones de tema e idioma -->
-    <div class="fixed top-6 right-8 z-50 flex gap-4 items-center">
-      <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card">
+    <div
+      id="theme-lang-buttons"
+      class="fixed z-50 flex gap-2 items-center top-2 left-1/2 -translate-x-1/2 right-auto md:top-6 md:right-8 md:left-auto md:bottom-auto md:translate-x-0 justify-center md:justify-end transition-all duration-300"
+    >
+      <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card p-2">
         <ThemeToggle />
       </div>
-      <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card">
+      <div class="bg-light-bg dark:bg-dark-bg rounded-xl shadow-card p-2">
         <LanguageToggle />
       </div>
     </div>

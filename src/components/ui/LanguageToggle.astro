@@ -1,28 +1,11 @@
 <div style="position:relative;display:inline-block;">
   <button
     type="button"
-    class="language-button rounded-xl border border-gengar-pastel bg-light-bg dark:bg-dark-bg shadow-none px-4 py-2"
+    class="language-button rounded-xl border border-gengar-pastel bg-light-bg dark:bg-dark-bg shadow-none px-4 py-2 text-gengar dark:text-white"
     aria-label="Cambiar idioma"
     id="language-toggle"
   >
     <span id="selected-lang">ES</span>
   </button>
-  <div
-    id="language-menu"
-    style="display:none; position:absolute; right:0; top:calc(100% + 4px); min-width:72px; max-width:90px; background:white; border-radius:0.75rem; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:10; border:1px solid #C084FC;"
-  >
-    <button
-      type="button"
-      data-lang="EN"
-      style="width:100%;text-align:left;padding:0.25rem 0.5rem;font-size:0.85rem;"
-      >English</button
-    >
-    <button
-      type="button"
-      data-lang="ES"
-      style="width:100%;text-align:left;padding:0.25rem 0.5rem;font-size:0.85rem;"
-      >Español</button
-    >
-  </div>
 </div>
 <script src="/src/scripts/toggleLanguage.js"></script>
