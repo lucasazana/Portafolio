@@ -1,4 +1,4 @@
-// funcion para actualizar el color del navbar segun la seccion
+// actualizar el color del navbar segun la seccion
 const sectionIds = ["home", "skills", "projects", "experience", "contact"];
 const navItems = document.querySelectorAll(".nav-links > li > a > div");
 
@@ -22,3 +22,18 @@ function updateActiveNavbar() {
 
 window.addEventListener("scroll", updateActiveNavbar);
 document.addEventListener("DOMContentLoaded", updateActiveNavbar);
+
+
+// ocultar el navbar en pantallas pequeñas
+function handleNavbarVisibility() {
+  const navbar = document.getElementById("main-navbar");
+  if (!navbar) return;
+  if (window.innerWidth < 768) {
+    navbar.style.display = "none";
+  } else {
+    navbar.style.display = "flex";
+  }
+}
+
+window.addEventListener("resize", handleNavbarVisibility);
+document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
