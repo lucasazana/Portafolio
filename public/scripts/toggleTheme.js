@@ -1,12 +1,12 @@
 // funcion para establecer el tema y alternar iconos
 function setTheme(theme) {
   if (theme === 'dark') {
-    document.body.classList.add('dark');
+    document.documentElement.classList.add('dark');
     showThemeIcon('dark');
     localStorage.setItem('theme', 'dark');
     console.log('Tema cambiado: Oscuro');
   } else {
-    document.body.classList.remove('dark');
+    document.documentElement.classList.remove('dark');
     showThemeIcon('light');
     localStorage.setItem('theme', 'light');
     console.log('Tema cambiado: Claro');
@@ -28,7 +28,7 @@ function showThemeIcon(theme) {
 
 // alternar tema e icono
 function toggleTheme() {
-  const isDark = document.body.classList.toggle('dark');
+  const isDark = document.documentElement.classList.toggle('dark');
   showThemeIcon(isDark ? 'dark' : 'light');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
   console.log('Tema cambiado:', isDark ? 'Oscuro' : 'Claro');
@@ -38,10 +38,10 @@ function toggleTheme() {
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
-    document.body.classList.add('dark');
+    document.documentElement.classList.add('dark');
     showThemeIcon('dark');
   } else {
-    document.body.classList.remove('dark');
+    document.documentElement.classList.remove('dark');
     showThemeIcon('light');
   }
 });
