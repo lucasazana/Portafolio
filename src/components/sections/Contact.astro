@@ -132,6 +132,13 @@ import SocialLinks from "../ui/contact/SocialLinksCard.astro";
               </button>
             </div>
           </form>
+          <!-- form oculto para que netlify lo detecte correctamente -->
+          <form name="contact-main" data-netlify="true" hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="text" name="project-type" />
+            <textarea name="message"></textarea>
+          </form>
         </div>
         <div class="flex flex-col gap-6">
           <ContactInfoCard />
