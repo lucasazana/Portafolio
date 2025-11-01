@@ -1,8 +1,6 @@
-// Edita baseUrl con tu usuario y repo de GitHub Pages
-const baseUrl = "https://usuario.github.io/repo";
+const baseUrl = "https://lucas-azana.netlify.app/";
 
 export async function get() {
-	// Lista de rutas de tu sitio
 	const pages = [
 		"/hero",
 		"/projects",
